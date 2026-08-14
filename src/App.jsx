@@ -84,13 +84,13 @@ function App() {
           </a>
 
           <nav className="main-nav">
-            <a href="#products">Products</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#industries">Industries</a>
-            <a href="#company">Company</a>
+            <a href="/products">Products</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/industries">Industries</a>
+            <a href="/company">Company</a>
           </nav>
 
-          <a href="#contact" className="header-cta">
+          <a href="/contact" className="header-cta">
             Get a Quote
             <span>↗</span>
           </a>
@@ -126,12 +126,12 @@ function App() {
             </p>
 
             <div className="hero-actions">
-              <a href="#products" className="primary-btn">
+              <a href="/products" className="primary-btn">
                 Explore Products
                 <span>↗</span>
               </a>
 
-              <a href="#solutions" className="secondary-btn">
+              <a href="/solutions" className="secondary-btn">
                 Discover Solutions
                 <span>→</span>
               </a>
