@@ -1,4 +1,50 @@
 import './App.css'
+import { useEffect, useRef, useState } from 'react'
+
+function Counter({ end, decimals = 0 }) {
+  const [count, setCount] = useState(0)
+  const ref = useRef(null)
+  const [started, setStarted] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true)
+        }
+      },
+      { threshold: 0.4 }
+    )
+
+    if (ref.current) observer.observe(ref.current)
+
+    return () => observer.disconnect()
+  }, [started])
+
+  useEffect(() => {
+    if (!started) return
+
+    const duration = 1800
+    const startTime = performance.now()
+
+    const animate = (currentTime) => {
+      const progress = Math.min((currentTime - startTime) / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+
+      setCount(end * eased)
+
+      if (progress < 1) {
+        requestAnimationFrame(animate)
+      } else {
+        setCount(end)
+      }
+    }
+
+    requestAnimationFrame(animate)
+  }, [started, end])
+
+  return <span ref={ref}>{count.toFixed(decimals)}</span>
+}
 
 function App() {
   return (
@@ -683,22 +729,22 @@ function App() {
     <div className="impact-stats">
 
       <div className="impact-stat">
-        <strong>10K<span>+</span></strong>
+        <strong><Counter end={10} /><span>K+</span></strong>
         <p>Transactions powered every day</p>
       </div>
 
       <div className="impact-stat">
-        <strong>99.9<span>%</span></strong>
+        <strong><Counter end={99.9} decimals={1} /><span>%</span></strong>
         <p>Reliable system uptime</p>
       </div>
 
       <div className="impact-stat">
-        <strong>24<span>/7</span></strong>
+        <strong><Counter end={24} /><span>/7</span></strong>
         <p>Business-ready technology</p>
       </div>
 
       <div className="impact-stat">
-        <strong>50<span>+</span></strong>
+        <strong><Counter end={50} /><span>+</span></strong>
         <p>Business use cases</p>
       </div>
 
