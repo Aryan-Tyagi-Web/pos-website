@@ -48,6 +48,7 @@ function Counter({ end, decimals = 0 }) {
 
 function App() {
   const [showTopButton, setShowTopButton] = useState(false)
+  const [productFilter, setProductFilter] = useState('All Products')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -419,16 +420,40 @@ function App() {
 
     <div className="products-filter">
 
-      <button className="active">All Products</button>
-      <button>POS Terminals</button>
-      <button>Kiosks</button>
-      <button>Accessories</button>
+      <button
+        className={productFilter === 'All Products' ? 'active' : ''}
+        onClick={() => setProductFilter('All Products')}
+      >
+        All Products
+      </button>
+
+      <button
+        className={productFilter === 'POS Terminals' ? 'active' : ''}
+        onClick={() => setProductFilter('POS Terminals')}
+      >
+        POS Terminals
+      </button>
+
+      <button
+        className={productFilter === 'Kiosks' ? 'active' : ''}
+        onClick={() => setProductFilter('Kiosks')}
+      >
+        Kiosks
+      </button>
+
+      <button
+        className={productFilter === 'Accessories' ? 'active' : ''}
+        onClick={() => setProductFilter('Accessories')}
+      >
+        Accessories
+      </button>
 
     </div>
 
 
     <div className="products-grid">
 
+      {(productFilter === 'All Products' || productFilter === 'POS Terminals') && (
       <article className="product-card">
 
         <div className="product-image">
@@ -459,8 +484,10 @@ function App() {
         </div>
 
       </article>
+      )}
 
 
+      {(productFilter === 'All Products' || productFilter === 'POS Terminals') && (
       <article className="product-card">
 
         <div className="product-image">
@@ -489,8 +516,10 @@ function App() {
         </div>
 
       </article>
+      )}
 
 
+      {(productFilter === 'All Products' || productFilter === 'Kiosks') && (
       <article className="product-card">
 
         <div className="product-image">
@@ -519,8 +548,10 @@ function App() {
         </div>
 
       </article>
+      )}
 
 
+      {(productFilter === 'All Products' || productFilter === 'Accessories') && (
       <article className="product-card">
 
         <div className="product-image">
@@ -549,6 +580,7 @@ function App() {
         </div>
 
       </article>
+      )}
 
     </div>
 
