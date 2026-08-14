@@ -2469,3 +2469,66 @@
   }
 
 }
+
+
+/* =========================
+   SCROLL TO TOP
+========================= */
+
+.scroll-top-btn {
+  position: fixed;
+
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 2000;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  background: #0b5cff;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  box-shadow: 0 12px 30px rgba(7, 26, 51, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-5px);
+
+  background: #071a33;
+
+  box-shadow: 0 16px 35px rgba(7, 26, 51, 0.28);
+}
+
+@media (max-width: 600px) {
+
+  .scroll-top-btn {
+    right: 18px;
+    bottom: 18px;
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 20px;
+  }
+
+}
