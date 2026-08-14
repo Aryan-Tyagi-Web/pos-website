@@ -1852,3 +1852,323 @@
     font-size: 11px;
   }
 }
+
+/* =========================
+   INDUSTRIES SECTION
+========================= */
+
+.industries-section {
+  position: relative;
+
+  padding: 125px 24px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.industries-container {
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.industries-heading {
+  max-width: 850px;
+
+  margin-bottom: 65px;
+}
+
+.industries-heading h2 {
+  margin: 0;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.06em;
+
+  color: var(--navy);
+}
+
+.industries-heading h2 span {
+  color: var(--primary);
+}
+
+.industries-heading p {
+  max-width: 650px;
+
+  margin-top: 22px;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   INDUSTRY GRID
+========================= */
+
+.industries-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+
+/* =========================
+   INDUSTRY CARD
+========================= */
+
+.industry-card {
+  position: relative;
+
+  min-height: 360px;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: 1px solid #e1e8f1;
+
+  border-radius: 22px;
+
+  background: #f8fbff;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(11, 92, 255, 0.25);
+
+  box-shadow:
+    0 25px 55px rgba(7, 26, 51, 0.09);
+}
+
+
+/* FEATURED */
+
+.industry-featured {
+  background:
+    linear-gradient(
+      145deg,
+      #0b5cff,
+      #063a9e
+    );
+
+  border-color: transparent;
+}
+
+.industry-featured .industry-number,
+.industry-featured .industry-content h3 {
+  color: #ffffff;
+}
+
+.industry-featured .industry-content p {
+  color: #c7d9f7;
+}
+
+.industry-featured .industry-content a {
+  color: #ffffff;
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.industry-number {
+  color: #7c90a9;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.industry-icon {
+  width: 58px;
+  height: 58px;
+
+  margin-top: 35px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #dbe5f0;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: var(--primary);
+
+  font-size: 25px;
+
+  box-shadow: 0 12px 30px rgba(7, 26, 51, 0.06);
+
+  transition: transform 0.35s ease;
+}
+
+.industry-card:hover .industry-icon {
+  transform: rotate(-6deg) scale(1.08);
+}
+
+.industry-featured .industry-icon {
+  border-color: rgba(255,255,255,0.2);
+
+  background: rgba(255,255,255,0.12);
+
+  color: #ffffff;
+
+  box-shadow: none;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.industry-content {
+  margin-top: auto;
+}
+
+.industry-content h3 {
+  color: var(--navy);
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: 22px;
+
+  letter-spacing: -0.04em;
+}
+
+.industry-content p {
+  max-width: 330px;
+
+  margin-top: 9px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.industry-content a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  color: var(--navy);
+
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+.industry-content a span {
+  color: var(--primary);
+
+  font-size: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.industry-content a:hover span {
+  transform: translate(4px, -3px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .industries-section {
+    padding: 90px 18px;
+  }
+
+  .industries-heading {
+    margin-bottom: 45px;
+  }
+
+  .industries-heading h2 {
+    font-size: 2.7rem;
+  }
+
+  .industries-heading p {
+    font-size: 13px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .industry-card {
+    min-height: 320px;
+
+    padding: 21px;
+  }
+
+  .industry-icon {
+    width: 52px;
+    height: 52px;
+
+    margin-top: 25px;
+  }
+
+  .industry-content h3 {
+    font-size: 20px;
+  }
+
+}

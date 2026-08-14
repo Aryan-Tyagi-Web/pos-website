@@ -489,6 +489,171 @@ function App() {
 
 </section>
 
+{/* INDUSTRIES */}
+<section className="industries-section" id="industries">
+
+  <div className="industries-container">
+
+    <div className="industries-heading">
+
+      <div className="section-label">
+        <span></span>
+        BUILT FOR EVERY BUSINESS
+      </div>
+
+      <h2>
+        One POS platform.
+        <span> Every kind of business.</span>
+      </h2>
+
+      <p>
+        Flexible technology designed around the way
+        different businesses operate, sell and serve
+        their customers.
+      </p>
+
+    </div>
+
+
+    <div className="industries-grid">
+
+      <div className="industry-card industry-featured">
+
+        <div className="industry-number">01</div>
+
+        <div className="industry-icon">◈</div>
+
+        <div className="industry-content">
+          <h3>Retail</h3>
+
+          <p>
+            Faster billing, inventory management and
+            seamless payment experiences for modern retail.
+          </p>
+
+          <a href="#contact">
+            Explore solution <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div className="industry-card">
+
+        <div className="industry-number">02</div>
+
+        <div className="industry-icon">⌁</div>
+
+        <div className="industry-content">
+          <h3>Restaurants</h3>
+
+          <p>
+            Simplify ordering, billing and payments
+            across every customer touchpoint.
+          </p>
+
+          <a href="#contact">
+            Explore solution <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div className="industry-card">
+
+        <div className="industry-number">03</div>
+
+        <div className="industry-icon">◇</div>
+
+        <div className="industry-content">
+          <h3>Hospitality</h3>
+
+          <p>
+            Connected POS solutions built for hotels,
+            cafés and hospitality businesses.
+          </p>
+
+          <a href="#contact">
+            Explore solution <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div className="industry-card">
+
+        <div className="industry-number">04</div>
+
+        <div className="industry-icon">＋</div>
+
+        <div className="industry-content">
+          <h3>QSR & Food Service</h3>
+
+          <p>
+            Keep queues moving with fast ordering,
+            payments and self-service technology.
+          </p>
+
+          <a href="#contact">
+            Explore solution <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div className="industry-card">
+
+        <div className="industry-number">05</div>
+
+        <div className="industry-icon">▣</div>
+
+        <div className="industry-content">
+          <h3>Supermarkets</h3>
+
+          <p>
+            Reliable checkout technology designed for
+            high-volume everyday transactions.
+          </p>
+
+          <a href="#contact">
+            Explore solution <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+
+      <div className="industry-card">
+
+        <div className="industry-number">06</div>
+
+        <div className="industry-icon">✦</div>
+
+        <div className="industry-content">
+          <h3>Growing Businesses</h3>
+
+          <p>
+            Scalable POS infrastructure that grows
+            alongside your business.
+          </p>
+
+          <a href="#contact">
+            Explore solution <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
     </div>
   )
 }
