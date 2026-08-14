@@ -654,6 +654,70 @@ function App() {
 
 </section>
 
+    {/* BUSINESS IMPACT */}
+<section className="impact-section">
+
+  <div className="impact-container">
+
+    <div className="impact-intro">
+
+      <div className="section-label light">
+        <span></span>
+        BUILT TO PERFORM
+      </div>
+
+      <h2>
+        Better technology.
+        <span> Better business.</span>
+      </h2>
+
+      <p>
+        From faster transactions to smoother operations,
+        our POS solutions help businesses deliver better
+        experiences every day.
+      </p>
+
+    </div>
+
+
+    <div className="impact-stats">
+
+      <div className="impact-stat">
+        <strong>10K<span>+</span></strong>
+        <p>Transactions powered every day</p>
+      </div>
+
+      <div className="impact-stat">
+        <strong>99.9<span>%</span></strong>
+        <p>Reliable system uptime</p>
+      </div>
+
+      <div className="impact-stat">
+        <strong>24<span>/7</span></strong>
+        <p>Business-ready technology</p>
+      </div>
+
+      <div className="impact-stat">
+        <strong>50<span>+</span></strong>
+        <p>Business use cases</p>
+      </div>
+
+    </div>
+
+
+    <div className="impact-bottom">
+
+      <span>SMARTER OPERATIONS</span>
+      <span>FASTER CHECKOUT</span>
+      <span>CONNECTED BUSINESS</span>
+      <span>READY TO SCALE</span>
+
+    </div>
+
+  </div>
+
+</section>
+
     </div>
   )
 }

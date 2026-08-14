@@ -2172,3 +2172,246 @@
   }
 
 }
+
+/* =========================
+   BUSINESS IMPACT
+========================= */
+
+.impact-section {
+  position: relative;
+
+  padding: 120px 24px;
+
+  background: #071a33;
+
+  overflow: hidden;
+}
+
+.impact-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  left: -300px;
+  top: -250px;
+
+  border-radius: 50%;
+
+  background: rgba(11, 92, 255, 0.16);
+
+  filter: blur(20px);
+}
+
+.impact-container {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1280px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.impact-intro {
+  max-width: 800px;
+}
+
+.impact-intro h2 {
+  margin: 0;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.06em;
+
+  color: #ffffff;
+}
+
+.impact-intro h2 span {
+  color: #4d86ff;
+}
+
+.impact-intro p {
+  max-width: 600px;
+
+  margin-top: 22px;
+
+  color: #91a6c1;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.impact-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 80px;
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.impact-stat {
+  min-height: 210px;
+
+  padding: 38px 28px;
+
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.impact-stat:last-child {
+  border-right: none;
+}
+
+.impact-stat strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-family: 'Manrope', sans-serif;
+
+  font-size: clamp(2.5rem, 4vw, 4rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.impact-stat strong span {
+  color: #4d86ff;
+}
+
+.impact-stat p {
+  max-width: 160px;
+
+  margin-top: 18px;
+
+  color: #8298b4;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   BOTTOM LINE
+========================= */
+
+.impact-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 28px;
+}
+
+.impact-bottom span {
+  color: #637b99;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impact-stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .impact-stat:nth-child(1),
+  .impact-stat:nth-child(2) {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .impact-bottom {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .impact-section {
+    padding: 90px 18px;
+  }
+
+  .impact-intro h2 {
+    font-size: 2.7rem;
+  }
+
+  .impact-intro p {
+    font-size: 13px;
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 55px;
+  }
+
+  .impact-stat {
+    min-height: 170px;
+
+    padding: 28px 18px;
+  }
+
+  .impact-stat strong {
+    font-size: 2.3rem;
+  }
+
+  .impact-stat p {
+    font-size: 10px;
+  }
+
+  .impact-bottom {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    padding-top: 25px;
+  }
+
+}
