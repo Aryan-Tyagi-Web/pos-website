@@ -1,0 +1,331 @@
+import './App.css'
+
+function App() {
+  return (
+    <div className="app">
+
+      {/* HEADER */}
+      <header className="site-header">
+        <div className="header-container">
+
+          <a href="#" className="brand">
+            <div className="brand-mark">P</div>
+            <div className="brand-name">
+              POS<span>TECH</span>
+            </div>
+          </a>
+
+          <nav className="main-nav">
+            <a href="#products">Products</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#industries">Industries</a>
+            <a href="#company">Company</a>
+          </nav>
+
+          <a href="#contact" className="header-cta">
+            Get a Quote
+            <span>↗</span>
+          </a>
+
+        </div>
+      </header>
+
+
+      {/* HERO */}
+      <main className="hero">
+
+        <div className="hero-glow hero-glow-one"></div>
+        <div className="hero-glow hero-glow-two"></div>
+
+        <div className="hero-container">
+
+          {/* LEFT CONTENT */}
+          <div className="hero-content">
+
+            <div className="hero-eyebrow">
+              <span className="eyebrow-dot"></span>
+              Smart POS Technology for Modern Business
+            </div>
+
+            <h1>
+              Powering the
+              <span> Future of Commerce.</span>
+            </h1>
+
+            <p>
+              Intelligent POS hardware built to simplify billing,
+              payments, ordering and everyday business operations.
+            </p>
+
+            <div className="hero-actions">
+              <a href="#products" className="primary-btn">
+                Explore Products
+                <span>↗</span>
+              </a>
+
+              <a href="#solutions" className="secondary-btn">
+                Discover Solutions
+                <span>→</span>
+              </a>
+            </div>
+
+            <div className="hero-trust">
+              <div className="trust-item">
+                <strong>01</strong>
+                <span>Smart Hardware</span>
+              </div>
+
+              <div className="trust-line"></div>
+
+              <div className="trust-item">
+                <strong>02</strong>
+                <span>Business Ready</span>
+              </div>
+
+              <div className="trust-line"></div>
+
+              <div className="trust-item">
+                <strong>03</strong>
+                <span>Built to Scale</span>
+              </div>
+            </div>
+
+          </div>
+
+
+          {/* RIGHT VISUAL */}
+          <div className="hero-visual">
+
+            <div className="visual-orbit orbit-one"></div>
+            <div className="visual-orbit orbit-two"></div>
+
+            <div className="floating-card card-top">
+              <span className="card-icon">▣</span>
+              <div>
+                <strong>Fast Checkout</strong>
+                <small>Seamless transactions</small>
+              </div>
+            </div>
+
+            <div className="pos-device">
+
+              <div className="device-screen">
+
+                <div className="screen-top">
+                  <span>POS TECH</span>
+                  <span>●</span>
+                </div>
+
+                <div className="screen-title">
+                  <small>Today's Sales</small>
+                  <strong>₹ 48,920</strong>
+                </div>
+
+                <div className="sales-chart">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div className="screen-bottom">
+                  <div>
+                    <small>Orders</small>
+                    <strong>128</strong>
+                  </div>
+
+                  <div>
+                    <small>Growth</small>
+                    <strong>+24%</strong>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="device-base">
+                <div className="device-slot"></div>
+                <div className="device-logo">P</div>
+              </div>
+
+            </div>
+
+            <div className="floating-card card-bottom">
+              <span className="success-icon">✓</span>
+              <div>
+                <strong>Payment Complete</strong>
+                <small>Transaction secured</small>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="hero-bottom-line">
+          <span>POS TERMINALS</span>
+          <span>ORDER MANAGEMENT</span>
+          <span>PAYMENT SOLUTIONS</span>
+          <span>SELF SERVICE</span>
+          <span>DIGITAL COMMERCE</span>
+        </div>
+
+      </main>
+
+      {/* SOLUTIONS */}
+<section className="solutions-section" id="solutions">
+
+  <div className="solutions-container">
+
+    <div className="solutions-top">
+
+      <div className="section-label light">
+        <span></span>
+        BUILT FOR THE WAY BUSINESS WORKS
+      </div>
+
+      <div className="solutions-title-row">
+
+        <h2>
+          Technology that works
+          <span> around your business.</span>
+        </h2>
+
+        <p>
+          From the first order to the final payment, our
+          hardware solutions are designed to make every
+          interaction faster, simpler and smarter.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div className="solutions-showcase">
+
+      {/* CARD 01 */}
+      <div className="solution-item solution-large">
+
+        <div className="solution-item-top">
+          <span>01</span>
+          <span className="solution-arrow">↗</span>
+        </div>
+
+        <div className="solution-visual visual-terminal">
+          <div className="mini-screen">
+            <div className="mini-header"></div>
+            <div className="mini-lines">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <div className="mini-button"></div>
+          </div>
+        </div>
+
+        <div className="solution-item-content">
+          <h3>Point of Sale</h3>
+          <p>
+            Smart terminals built for fast billing,
+            payments and reliable everyday operations.
+          </p>
+        </div>
+
+      </div>
+
+
+      {/* CARD 02 */}
+      <div className="solution-item">
+
+        <div className="solution-item-top">
+          <span>02</span>
+          <span className="solution-arrow">↗</span>
+        </div>
+
+        <div className="solution-visual visual-order">
+          <div className="order-screen">
+            <span>NEW ORDER</span>
+            <strong>Table 24</strong>
+            <small>4 Items • ₹1,280</small>
+          </div>
+        </div>
+
+        <div className="solution-item-content">
+          <h3>Order Management</h3>
+          <p>
+            Take orders faster and keep your operations
+            connected across every touchpoint.
+          </p>
+        </div>
+
+      </div>
+
+
+      {/* CARD 03 */}
+      <div className="solution-item">
+
+        <div className="solution-item-top">
+          <span>03</span>
+          <span className="solution-arrow">↗</span>
+        </div>
+
+        <div className="solution-visual visual-kiosk">
+          <div className="kiosk-screen">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div className="solution-item-content">
+          <h3>Self-Service</h3>
+          <p>
+            Create faster customer experiences with
+            intuitive self-service technology.
+          </p>
+        </div>
+
+      </div>
+
+
+      {/* CARD 04 */}
+      <div className="solution-item">
+
+        <div className="solution-item-top">
+          <span>04</span>
+          <span className="solution-arrow">↗</span>
+        </div>
+
+        <div className="solution-visual visual-menu">
+          <div className="menu-screen">
+            <div className="menu-row"></div>
+            <div className="menu-row"></div>
+            <div className="menu-row"></div>
+            <div className="menu-row"></div>
+          </div>
+        </div>
+
+        <div className="solution-item-content">
+          <h3>Digital Experiences</h3>
+          <p>
+            Modern digital interfaces for menus,
+            displays and connected customer journeys.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    </div>
+  )
+}
+
+export default App
