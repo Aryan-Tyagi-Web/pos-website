@@ -785,6 +785,56 @@ function App() {
 
 </section>
 
+    {/* CTA */}
+<section className="cta-section" id="contact">
+
+  <div className="cta-container">
+
+    <div className="cta-glow"></div>
+
+    <div className="cta-content">
+
+      <div className="section-label light">
+        <span></span>
+        LET'S BUILD WHAT'S NEXT
+      </div>
+
+      <h2>
+        Ready to make
+        <span> business simpler?</span>
+      </h2>
+
+      <p>
+        Talk to our team about the right POS technology
+        for your business and discover a smarter way to
+        sell, serve and grow.
+      </p>
+
+      <div className="cta-actions">
+
+        <a href="/request-demo" className="cta-primary">
+          Request a Demo
+          <span>↗</span>
+        </a>
+
+        <a href="/contact" className="cta-secondary">
+          Talk to Our Team
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+    <div className="cta-side-text">
+      <span>POS TECHNOLOGY</span>
+      <span>BUILT FOR GROWTH</span>
+    </div>
+
+  </div>
+
+</section>
+
       {showTopButton && (
         <button
           className="scroll-top-btn"
