@@ -324,6 +324,171 @@ function App() {
 
 </section>
 
+{/* PRODUCTS */}
+<section className="products-section" id="products">
+
+  <div className="products-container">
+
+    <div className="products-heading">
+
+      <div className="section-label">
+        <span></span>
+        OUR PRODUCTS
+      </div>
+
+      <h2>
+        Hardware built for
+        <span> every business.</span>
+      </h2>
+
+      <p>
+        Reliable POS technology designed to help
+        businesses sell faster, serve better and grow
+        with confidence.
+      </p>
+
+    </div>
+
+
+    <div className="products-filter">
+
+      <button className="active">All Products</button>
+      <button>POS Terminals</button>
+      <button>Kiosks</button>
+      <button>Accessories</button>
+
+    </div>
+
+
+    <div className="products-grid">
+
+      <article className="product-card">
+
+        <div className="product-image">
+          <div className="image-placeholder">
+            <span>PRODUCT IMAGE</span>
+          </div>
+
+          <span className="product-tag">BEST SELLER</span>
+        </div>
+
+        <div className="product-info">
+
+          <span className="product-category">
+            POS TERMINAL
+          </span>
+
+          <h3>Smart POS Terminal</h3>
+
+          <p>
+            Powerful Android POS terminal built for
+            fast and reliable daily transactions.
+          </p>
+
+          <a href="#contact">
+            View Product <span>↗</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article className="product-card">
+
+        <div className="product-image">
+          <div className="image-placeholder">
+            <span>PRODUCT IMAGE</span>
+          </div>
+        </div>
+
+        <div className="product-info">
+
+          <span className="product-category">
+            SMART POS
+          </span>
+
+          <h3>All-in-One POS</h3>
+
+          <p>
+            A sleek business-ready POS solution
+            combining performance and simplicity.
+          </p>
+
+          <a href="#contact">
+            View Product <span>↗</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article className="product-card">
+
+        <div className="product-image">
+          <div className="image-placeholder">
+            <span>PRODUCT IMAGE</span>
+          </div>
+        </div>
+
+        <div className="product-info">
+
+          <span className="product-category">
+            SELF SERVICE
+          </span>
+
+          <h3>Self-Service Kiosk</h3>
+
+          <p>
+            Interactive self-service technology
+            designed for faster customer experiences.
+          </p>
+
+          <a href="#contact">
+            View Product <span>↗</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <article className="product-card">
+
+        <div className="product-image">
+          <div className="image-placeholder">
+            <span>PRODUCT IMAGE</span>
+          </div>
+        </div>
+
+        <div className="product-info">
+
+          <span className="product-category">
+            ACCESSORIES
+          </span>
+
+          <h3>POS Accessories</h3>
+
+          <p>
+            Essential peripherals and accessories
+            designed to complete your POS setup.
+          </p>
+
+          <a href="#contact">
+            View Product <span>↗</span>
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
     </div>
   )
 }
