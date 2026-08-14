@@ -764,39 +764,8 @@ function App() {
 
 </section>
 
-{showTopButton && (
-  <button
-    className="scroll-top-btn"
-    onClick={scrollToTop}
-    aria-label="Scroll to top"
-  >
-    ↑
-  </button>
-)}
-
     </div>
   )
-}
-
-const [showTopButton, setShowTopButton] = useState(false)
-
-useEffect(() => {
-  const handleScroll = () => {
-    setShowTopButton(window.scrollY > 500)
-  }
-
-  window.addEventListener('scroll', handleScroll)
-
-  return () => {
-    window.removeEventListener('scroll', handleScroll)
-  }
-}, [])
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
 }
 
 export default App
