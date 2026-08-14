@@ -835,6 +835,98 @@ function App() {
 
 </section>
 
+    {/* FOOTER */}
+<footer className="site-footer">
+
+  <div className="footer-container">
+
+    <div className="footer-main">
+
+      <div className="footer-brand">
+
+        <a href="#" className="brand footer-logo">
+          <div className="brand-mark">P</div>
+
+          <div className="brand-name">
+            POS<span>TECH</span>
+          </div>
+        </a>
+
+        <p>
+          Intelligent POS technology built to help
+          modern businesses sell smarter, serve better
+          and grow faster.
+        </p>
+
+        <a href="mailto:hello@postech.com" className="footer-email">
+          hello@postech.com
+        </a>
+
+      </div>
+
+
+      <div className="footer-links">
+
+        <div className="footer-column">
+          <h4>Products</h4>
+
+          <a href="/products">All Products</a>
+          <a href="/products/pos-terminals">POS Terminals</a>
+          <a href="/products/self-service">Self-Service</a>
+          <a href="/products/accessories">Accessories</a>
+        </div>
+
+
+        <div className="footer-column">
+          <h4>Solutions</h4>
+
+          <a href="/solutions">All Solutions</a>
+          <a href="/solutions/pos">Point of Sale</a>
+          <a href="/solutions/order-management">
+            Order Management
+          </a>
+          <a href="/solutions/digital-experiences">
+            Digital Experiences
+          </a>
+        </div>
+
+
+        <div className="footer-column">
+          <h4>Company</h4>
+
+          <a href="/company">About Us</a>
+          <a href="/industries">Industries</a>
+          <a href="/contact">Contact</a>
+          <a href="/request-demo">Request a Demo</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div className="footer-bottom">
+
+      <span>
+        © 2026 POS TECH. All rights reserved.
+      </span>
+
+      <div className="footer-bottom-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+
+      <span className="footer-status">
+        <i></i>
+        SYSTEMS ONLINE
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
       {showTopButton && (
         <button
           className="scroll-top-btn"
