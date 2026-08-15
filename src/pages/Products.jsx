@@ -200,7 +200,7 @@ function Products() {
             </a>
           </nav>
 
-          <a href="#contact" className="header-cta">
+          <a href="/contact" className="header-cta">
             Get a Quote
             <span>↗</span>
           </a>
@@ -256,7 +256,7 @@ function Products() {
         </nav>
 
         <a
-          href="#contact"
+          href="/contact"
           className="mobile-drawer-cta"
           onClick={() => setMenuOpen(false)}
         >
@@ -575,8 +575,8 @@ function Products() {
                 <h4>Company</h4>
                 <a href="/company">About Us</a>
                 <a href="/industries">Industries</a>
-                <Link to="/contact">Contact</Link>
-                <Link to="/contact">Request a Demo</Link>
+                <a href="/contact">Contact</a>
+                <a href="/contact">Request a Demo</a>
               </div>
 
             </div>
