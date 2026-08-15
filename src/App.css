@@ -7526,3 +7526,73 @@
     width: 100%;
   }
 }
+
+/* =========================================================
+   PRODUCT DETAIL - MOBILE ALIGNMENT FIX
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .product-detail-hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .product-detail-copy {
+    width: 100%;
+  }
+
+  .product-detail-visual {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Keep detail page aligned with the rest of the website */
+  .product-detail-hero {
+    padding: 115px 18px 55px;
+    gap: 14px;
+  }
+
+  .product-back-link {
+    margin-bottom: 25px;
+  }
+
+  .product-detail-copy h1 {
+    font-size: 48px;
+    line-height: 0.94;
+  }
+
+  .product-detail-copy p {
+    max-width: 100%;
+    margin-top: 26px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .product-detail-actions {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .product-detail-actions .products-primary-btn,
+  .product-detail-actions .products-secondary-btn {
+    width: 100%;
+    min-height: 52px;
+  }
+
+  .product-detail-visual {
+    min-height: 390px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .detail-device {
+    width: 265px;
+    max-width: 90%;
+  }
+
+  .detail-image-note {
+    right: 4px;
+  }
+}

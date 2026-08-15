@@ -271,12 +271,19 @@ function ProductDetail() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
+  if (menuOpen) {
+    document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+    document.documentElement.style.overflow = ''
+  }
 
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [menuOpen])
+  return () => {
+    document.body.style.overflow = ''
+    document.documentElement.style.overflow = ''
+  }
+}, [menuOpen])
 
   if (!product) {
     return (
