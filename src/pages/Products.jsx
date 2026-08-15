@@ -465,7 +465,7 @@ function Products() {
               your business operates.
             </p>
 
-            <a href="#contact" className="products-primary-btn">
+            <a href="/contact" className="products-primary-btn">
               Build Your Setup
               <span>↗</span>
             </a>
