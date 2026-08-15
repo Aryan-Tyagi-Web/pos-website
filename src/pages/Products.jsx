@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './App.css'
+import '../App.css'
 
 function Products() {
   const [menuOpen, setMenuOpen] = useState(false)
