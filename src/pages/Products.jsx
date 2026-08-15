@@ -1,9 +1,124 @@
 import { useEffect, useState } from 'react'
 import '../App.css'
 
+const productCategories = [
+  {
+    number: '01',
+    icon: '◈',
+    name: 'Mobile POS',
+    description: 'Compact Android POS devices built for flexible, on-the-go transactions.',
+  },
+  {
+    number: '02',
+    icon: '▣',
+    name: 'Stationary POS',
+    description: 'Reliable countertop systems designed for fast everyday checkout.',
+  },
+  {
+    number: '03',
+    icon: '▤',
+    name: 'Order Taking Tablets',
+    description: 'Portable ordering solutions that help teams serve customers faster.',
+  },
+  {
+    number: '04',
+    icon: '▥',
+    name: 'Digital Menu Board',
+    description: 'Modern digital displays for menus, promotions, and customer experiences.',
+  },
+  {
+    number: '05',
+    icon: '⌘',
+    name: 'Kiosk',
+    description: 'Self-service systems designed for ordering, payments, ticketing, and more.',
+  },
+]
+
+const products = [
+  {
+    number: '01',
+    name: 'SN11',
+    category: 'MOBILE POS',
+    description: 'Compact mobile POS hardware for flexible point-of-sale operations.',
+  },
+  {
+    number: '02',
+    name: 'SN57',
+    category: 'MOBILE POS',
+    description: 'Portable POS hardware designed for fast customer transactions.',
+  },
+  {
+    number: '03',
+    name: 'SN60',
+    category: 'MOBILE POS',
+    description: 'Modern mobile commerce hardware for efficient checkout experiences.',
+  },
+  {
+    number: '04',
+    name: 'SN65',
+    category: 'MOBILE POS',
+    description: 'Flexible mobile POS hardware for retail and hospitality environments.',
+  },
+  {
+    number: '05',
+    name: 'SN80',
+    category: 'MOBILE POS',
+    description: 'A larger mobile POS format designed for connected commerce workflows.',
+  },
+  {
+    number: '06',
+    name: 'SN200',
+    category: 'STATIONARY POS',
+    description: 'Countertop POS hardware built for dependable everyday operations.',
+  },
+  {
+    number: '07',
+    name: 'X6',
+    category: 'STATIONARY POS',
+    description: 'Modular POS hardware designed for flexible Android and Windows setups.',
+  },
+  {
+    number: '08',
+    name: 'Z3',
+    category: 'STATIONARY POS',
+    description: 'Professional countertop POS hardware for modern business environments.',
+  },
+  {
+    number: '09',
+    name: 'Order Taking Tablet',
+    category: 'ORDER TAKING',
+    description: 'Tablet-based ordering designed to help teams capture orders efficiently.',
+  },
+  {
+    number: '10',
+    name: 'Digital Menu Display',
+    category: 'DIGITAL MENU',
+    description: 'Digital display hardware for clear, flexible menu presentation.',
+  },
+  {
+    number: '11',
+    name: 'C2100',
+    category: 'KIOSK',
+    description: 'Self-service kiosk hardware designed for interactive customer experiences.',
+  },
+  {
+    number: '12',
+    name: 'Self-Service Kiosk',
+    category: 'KIOSK',
+    description: 'Standalone self-service hardware for ordering and customer workflows.',
+  },
+  {
+    number: '13',
+    name: 'Enterprise Kiosk',
+    category: 'KIOSK',
+    description: 'Scalable kiosk hardware for high-traffic commercial environments.',
+  },
+]
+
 function Products() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showTopButton, setShowTopButton] = useState(false)
+  const [activeCategory, setActiveCategory] = useState('ALL')
 
   const currentPath = window.location.pathname
 
@@ -34,6 +149,11 @@ function Products() {
     })
   }
 
+  const filteredProducts =
+    activeCategory === 'ALL'
+      ? products
+      : products.filter((product) => product.category === activeCategory)
+
   return (
     <div className="app">
 
@@ -49,34 +169,22 @@ function Products() {
           </a>
 
           <nav className="main-nav">
-  <a
-    href="/products"
-    className={currentPath === '/products' ? 'active' : ''}
-  >
-    Products
-  </a>
+            <a href="/products" className={currentPath === '/products' ? 'active' : ''}>
+              Products
+            </a>
 
-  <a
-    href="/solutions"
-    className={currentPath === '/solutions' ? 'active' : ''}
-  >
-    Solutions
-  </a>
+            <a href="/solutions" className={currentPath === '/solutions' ? 'active' : ''}>
+              Solutions
+            </a>
 
-  <a
-    href="/industries"
-    className={currentPath === '/industries' ? 'active' : ''}
-  >
-    Industries
-  </a>
+            <a href="/industries" className={currentPath === '/industries' ? 'active' : ''}>
+              Industries
+            </a>
 
-  <a
-    href="/company"
-    className={currentPath === '/company' ? 'active' : ''}
-  >
-    Company
-  </a>
-</nav>
+            <a href="/company" className={currentPath === '/company' ? 'active' : ''}>
+              Company
+            </a>
+          </nav>
 
           <a href="#contact" className="header-cta">
             Get a Quote
@@ -115,35 +223,23 @@ function Products() {
           </button>
         </div>
 
-        <nav className="main-nav">
-  <a
-    href="/products"
-    className={currentPath === '/products' ? 'active' : ''}
-  >
-    Products
-  </a>
+        <nav className="mobile-drawer-nav">
+          <a href="/products" className={currentPath === '/products' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Products
+          </a>
 
-  <a
-    href="/solutions"
-    className={currentPath === '/solutions' ? 'active' : ''}
-  >
-    Solutions
-  </a>
+          <a href="/solutions" className={currentPath === '/solutions' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Solutions
+          </a>
 
-  <a
-    href="/industries"
-    className={currentPath === '/industries' ? 'active' : ''}
-  >
-    Industries
-  </a>
+          <a href="/industries" className={currentPath === '/industries' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Industries
+          </a>
 
-  <a
-    href="/company"
-    className={currentPath === '/company' ? 'active' : ''}
-  >
-    Company
-  </a>
-</nav>
+          <a href="/company" className={currentPath === '/company' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Company
+          </a>
+        </nav>
 
         <a
           href="#contact"
@@ -155,9 +251,10 @@ function Products() {
         </a>
       </aside>
 
+
       <main className="products-page">
 
-        {/* PRODUCTS HERO */}
+        {/* HERO */}
         <section className="products-hero">
           <div className="products-hero-content">
 
@@ -168,17 +265,17 @@ function Products() {
 
             <h1>
               Technology built for
-              <span> modern commerce.</span>
+              <span>modern commerce.</span>
             </h1>
 
             <p>
-              Powerful POS hardware and intelligent commerce solutions
-              designed to help businesses sell faster, serve better,
-              and grow with confidence.
+              Explore a complete range of POS hardware and self-service
+              technology designed to help businesses sell faster,
+              serve better, and grow with confidence.
             </p>
 
             <div className="products-hero-actions">
-              <a href="#featured-products" className="products-primary-btn">
+              <a href="#product-catalog" className="products-primary-btn">
                 Explore Products
                 <span>↘</span>
               </a>
@@ -206,13 +303,7 @@ function Products() {
                 </div>
 
                 <div className="screen-bars">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                  <i></i>
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
                 </div>
               </div>
 
@@ -232,163 +323,174 @@ function Products() {
             </div>
 
             <p>
-              From checkout hardware to self-service experiences,
+              From mobile checkout to self-service experiences,
               build a complete commerce setup around your business.
             </p>
           </div>
 
-          <div className="product-category-grid">
+          <div className="product-category-grid product-category-grid-five">
+            {productCategories.map((category) => (
+              <article className="product-category-card" key={category.name}>
+                <div className="product-card-number">{category.number}</div>
+                <div className="product-card-icon">{category.icon}</div>
 
-            <article className="product-category-card">
-              <div className="product-card-number">01</div>
-              <div className="product-card-icon">▣</div>
-              <h3>POS Terminals</h3>
-              <p>
-                Modern point-of-sale terminals designed for
-                fast, reliable everyday transactions.
-              </p>
-              <a href="#featured-products">
-                Explore
-                <span>↗</span>
-              </a>
-            </article>
+                <h3>{category.name}</h3>
 
-            <article className="product-category-card">
-              <div className="product-card-number">02</div>
-              <div className="product-card-icon">▤</div>
-              <h3>Self-Service Kiosks</h3>
-              <p>
-                Give customers a faster way to browse, order,
-                pay, and complete their purchases.
-              </p>
-              <a href="#featured-products">
-                Explore
-                <span>↗</span>
-              </a>
-            </article>
+                <p>{category.description}</p>
 
-            <article className="product-category-card">
-              <div className="product-card-number">03</div>
-              <div className="product-card-icon">◫</div>
-              <h3>Payment Devices</h3>
-              <p>
-                Flexible payment hardware built to support
-                secure and seamless transactions.
-              </p>
-              <a href="#featured-products">
-                Explore
-                <span>↗</span>
-              </a>
-            </article>
-
-            <article className="product-category-card">
-              <div className="product-card-number">04</div>
-              <div className="product-card-icon">⌘</div>
-              <h3>Accessories</h3>
-              <p>
-                Essential accessories that complete your
-                point-of-sale and commerce environment.
-              </p>
-              <a href="#featured-products">
-                Explore
-                <span>↗</span>
-              </a>
-            </article>
-
+                <a
+                  href="#product-catalog"
+                  onClick={() => setActiveCategory(category.name.toUpperCase())}
+                >
+                  Explore
+                  <span>↗</span>
+                </a>
+              </article>
+            ))}
           </div>
+
         </section>
 
 
-        {/* FEATURED PRODUCTS */}
-        <section className="featured-products" id="featured-products">
+        {/* PRODUCT CATALOG */}
+        <section className="product-catalog" id="product-catalog">
 
-          <div className="products-section-heading featured-heading">
+          <div className="products-section-heading catalog-heading">
             <div>
-              <span>FEATURED HARDWARE</span>
-              <h2>Built to perform.</h2>
+              <span>PRODUCT CATALOGUE</span>
+              <h2>Find the right hardware.</h2>
             </div>
 
             <p>
-              Premium hardware designed around speed,
-              reliability, and a better customer experience.
+              Browse the product range by category. Product photography
+              and final specifications can be added once the client
+              provides the approved assets.
             </p>
           </div>
 
-          <div className="featured-product-grid">
+          <div className="product-filter-bar">
 
-            <article className="featured-product-card large">
-              <div className="featured-product-visual terminal-visual">
-                <div className="terminal-shape">
-                  <div className="terminal-display"></div>
-                </div>
-              </div>
-
-              <div className="featured-product-info">
-                <span>01 / POS HARDWARE</span>
-                <h3>Smart POS Terminal</h3>
-                <p>
-                  A powerful all-in-one checkout experience
-                  for modern retail and hospitality businesses.
-                </p>
-                <a href="#contact">
-                  Request Information
-                  <span>↗</span>
-                </a>
-              </div>
-            </article>
-
-            <article className="featured-product-card">
-              <div className="featured-product-visual kiosk-visual">
-                <div className="kiosk-shape">
-                  <div className="kiosk-screen"></div>
-                </div>
-              </div>
-
-              <div className="featured-product-info">
-                <span>02 / SELF-SERVICE</span>
-                <h3>Self-Service Kiosk</h3>
-                <p>
-                  Streamline ordering and reduce waiting times.
-                </p>
-                <a href="#contact">
-                  Request Information
-                  <span>↗</span>
-                </a>
-              </div>
-            </article>
-
-            <article className="featured-product-card">
-              <div className="featured-product-visual payment-visual">
-                <div className="payment-device">
-                  <div className="payment-screen"></div>
-                  <div className="payment-buttons"></div>
-                </div>
-              </div>
-
-              <div className="featured-product-info">
-                <span>03 / PAYMENTS</span>
-                <h3>Payment Device</h3>
-                <p>
-                  Fast and secure payment acceptance.
-                </p>
-                <a href="#contact">
-                  Request Information
-                  <span>↗</span>
-                </a>
-              </div>
-            </article>
+            {[
+              'ALL',
+              'MOBILE POS',
+              'STATIONARY POS',
+              'ORDER TAKING',
+              'DIGITAL MENU',
+              'KIOSK',
+            ].map((category) => (
+              <button
+                key={category}
+                className={activeCategory === category ? 'active' : ''}
+                onClick={() => setActiveCategory(category)}
+              >
+                {category === 'ALL' ? 'All Products' : category}
+              </button>
+            ))}
 
           </div>
+
+          <div className="product-catalog-grid">
+
+            {filteredProducts.map((product) => (
+              <article className="product-catalog-card" key={product.name}>
+
+                <div className="catalog-product-visual">
+                  <div className="catalog-product-placeholder">
+                    <span>{product.name}</span>
+                    <small>PRODUCT IMAGE</small>
+                  </div>
+
+                  <div className="catalog-product-index">
+                    {product.number}
+                  </div>
+                </div>
+
+                <div className="catalog-product-info">
+
+                  <span>{product.category}</span>
+
+                  <h3>{product.name}</h3>
+
+                  <p>{product.description}</p>
+
+                  <a href="#contact">
+                    Request Information
+                    <span>↗</span>
+                  </a>
+
+                </div>
+
+              </article>
+            ))}
+
+          </div>
+
+        </section>
+
+
+        {/* PRODUCT EXPERIENCE */}
+        <section className="product-experience">
+
+          <div className="product-experience-copy">
+            <span>BUILT AROUND YOUR BUSINESS</span>
+
+            <h2>
+              Hardware that works
+              <span>with your workflow.</span>
+            </h2>
+
+            <p>
+              Choose the right combination of POS, mobile ordering,
+              digital displays, and self-service hardware for the way
+              your business operates.
+            </p>
+
+            <a href="#contact" className="products-primary-btn">
+              Build Your Setup
+              <span>↗</span>
+            </a>
+          </div>
+
+          <div className="product-experience-grid">
+
+            <div>
+              <strong>01</strong>
+              <span>Fast Checkout</span>
+              <p>Designed for quick, reliable customer transactions.</p>
+            </div>
+
+            <div>
+              <strong>02</strong>
+              <span>Flexible Hardware</span>
+              <p>Choose hardware that fits your environment and workflow.</p>
+            </div>
+
+            <div>
+              <strong>03</strong>
+              <span>Self-Service</span>
+              <p>Give customers more ways to browse, order, and pay.</p>
+            </div>
+
+            <div>
+              <strong>04</strong>
+              <span>Connected Commerce</span>
+              <p>Build a technology ecosystem that can grow with you.</p>
+            </div>
+
+          </div>
+
         </section>
 
 
         {/* CTA */}
         <section className="products-bottom-cta" id="contact">
+
           <div>
             <span>READY TO BUILD?</span>
+
             <h2>
               Let's find the right
-              <span> solution for you.</span>
+              <span>solution for you.</span>
             </h2>
           </div>
 
@@ -396,6 +498,7 @@ function Products() {
             Talk to an Expert
             <span>↗</span>
           </a>
+
         </section>
 
       </main>
@@ -430,46 +533,35 @@ function Products() {
 
             </div>
 
-
             <div className="footer-links">
 
               <div className="footer-column">
                 <h4>Products</h4>
-
                 <a href="/products">All Products</a>
-                <a href="/products/pos-terminals">POS Terminals</a>
-                <a href="/products/self-service">Self-Service</a>
-                <a href="/products/accessories">Accessories</a>
+                <a href="#product-catalog">POS Hardware</a>
+                <a href="#product-catalog">Self-Service</a>
+                <a href="#product-catalog">Accessories</a>
               </div>
-
 
               <div className="footer-column">
                 <h4>Solutions</h4>
-
                 <a href="/solutions">All Solutions</a>
-                <a href="/solutions/pos">Point of Sale</a>
-                <a href="/solutions/order-management">
-                  Order Management
-                </a>
-                <a href="/solutions/digital-experiences">
-                  Digital Experiences
-                </a>
+                <a href="/solutions">Point of Sale</a>
+                <a href="/solutions">Order Management</a>
+                <a href="/solutions">Digital Experiences</a>
               </div>
-
 
               <div className="footer-column">
                 <h4>Company</h4>
-
                 <a href="/company">About Us</a>
                 <a href="/industries">Industries</a>
-                <a href="/contact">Contact</a>
-                <a href="/request-demo">Request a Demo</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact">Request a Demo</a>
               </div>
 
             </div>
 
           </div>
-
 
           <div className="footer-bottom">
 
