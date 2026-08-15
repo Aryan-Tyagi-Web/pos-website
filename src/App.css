@@ -5767,3 +5767,14 @@
     min-height: 350px;
   }
 }
+
+/* ACTIVE NAVIGATION */
+.main-nav a.active {
+  color: #1769ff;
+  font-weight: 700;
+}
+
+.mobile-drawer-nav a.active {
+  color: #1769ff;
+  font-weight: 700;
+}

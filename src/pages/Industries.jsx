@@ -5,6 +5,8 @@ function Industries() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showTopButton, setShowTopButton] = useState(false)
 
+  const currentPath = window.location.pathname
+
   useEffect(() => {
     const handleScroll = () => {
       setShowTopButton(window.scrollY > 500)
@@ -47,10 +49,30 @@ function Industries() {
           </a>
 
           <nav className="main-nav">
-            <a href="/products">Products</a>
-            <a href="/solutions">Solutions</a>
-            <a href="/industries">Industries</a>
-            <a href="/company">Company</a>
+            <a
+              href="/products"
+              className={currentPath === '/products' ? 'active' : ''}
+            >
+              Products
+            </a>
+            <a
+              href="/solutions"
+              className={currentPath === '/solutions' ? 'active' : ''}
+            >
+              Solutions
+            </a>
+            <a
+              href="/industries"
+              className={currentPath === '/industries' ? 'active' : ''}
+            >
+              Industries
+            </a>
+            <a
+              href="/company"
+              className={currentPath === '/company' ? 'active' : ''}
+            >
+              Company
+            </a>
           </nav>
 
           <a href="#contact" className="header-cta">
@@ -91,10 +113,18 @@ function Industries() {
         </div>
 
         <nav className="mobile-drawer-nav">
-          <a href="/products" onClick={() => setMenuOpen(false)}>Products</a>
-          <a href="/solutions" onClick={() => setMenuOpen(false)}>Solutions</a>
-          <a href="/industries" onClick={() => setMenuOpen(false)}>Industries</a>
-          <a href="/company" onClick={() => setMenuOpen(false)}>Company</a>
+          <a href="/products" className={currentPath === '/products' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Products
+          </a>
+          <a href="/solutions" className={currentPath === '/solutions' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Solutions
+          </a>
+          <a href="/industries" className={currentPath === '/industries' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Industries
+          </a>
+          <a href="/company" className={currentPath === '/company' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Company
+          </a>
         </nav>
 
         <a
