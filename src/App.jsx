@@ -94,12 +94,12 @@ function App() {
 
           <nav className="main-nav">
             <a href="/products">Products</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#industries">Industries</a>
-            <a href="#company">Company</a>
+            <a href="/solutions">Solutions</a>
+            <a href="/industries">Industries</a>
+            <a href="/company">Company</a>
           </nav>
 
-                    <a href="#contact" className="header-cta">
+                    <a href="/contact" className="header-cta">
             Get a Quote
             <span>↗</span>
           </a>
@@ -136,14 +136,14 @@ function App() {
         </div>
 
         <nav className="mobile-drawer-nav">
-          <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
-          <a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a>
-          <a href="#industries" onClick={() => setMenuOpen(false)}>Industries</a>
-          <a href="#company" onClick={() => setMenuOpen(false)}>Company</a>
+          <a href="/products" onClick={() => setMenuOpen(false)}>Products</a>
+          <a href="/solutions" onClick={() => setMenuOpen(false)}>Solutions</a>
+          <a href="/industries" onClick={() => setMenuOpen(false)}>Industries</a>
+          <a href="/company" onClick={() => setMenuOpen(false)}>Company</a>
         </nav>
 
         <a
-          href="#contact"
+          href="/contact"
           className="mobile-drawer-cta"
           onClick={() => setMenuOpen(false)}
         >
@@ -185,7 +185,7 @@ function App() {
                 <span>↗</span>
               </a>
 
-              <a href="#solutions" className="secondary-btn">
+              <a href="/solutions" className="secondary-btn">
                 Discover Solutions
                 <span>→</span>
               </a>

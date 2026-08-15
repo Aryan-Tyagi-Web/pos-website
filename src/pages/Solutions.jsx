@@ -136,7 +136,7 @@ function Solutions() {
                 <span>↘</span>
               </a>
 
-              <a href="#contact" className="solutions-secondary-btn">
+              <a href="/contact" className="solutions-secondary-btn">
                 Talk to an Expert
               </a>
             </div>
