@@ -63,6 +63,14 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -91,12 +99,7 @@ function App() {
             <a href="#company">Company</a>
           </nav>
 
-          <a href="#contact" className="header-cta">
-            Get a Quote
-            <span>↗</span>
-          </a>
-
-          <button
+                    <button
             className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
