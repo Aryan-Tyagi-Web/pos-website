@@ -563,9 +563,10 @@ function App() {
       <article className="product-card">
 
         <div className="product-image">
-          <div className="image-placeholder">
-            <span>PRODUCT IMAGE</span>
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=85"
+            alt="Smart POS terminal"
+          />
 
           <span className="product-tag">BEST SELLER</span>
         </div>
@@ -583,7 +584,7 @@ function App() {
             fast and reliable daily transactions.
           </p>
 
-          <a href="#contact">
+          <a href="/products#product-catalog">
             View Product <span>↗</span>
           </a>
 
@@ -597,9 +598,10 @@ function App() {
       <article className="product-card">
 
         <div className="product-image">
-          <div className="image-placeholder">
-            <span>PRODUCT IMAGE</span>
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&w=1000&q=85"
+            alt="All-in-one POS system"
+          />
         </div>
 
         <div className="product-info">
@@ -615,7 +617,7 @@ function App() {
             combining performance and simplicity.
           </p>
 
-          <a href="#contact">
+          <a href="/products#product-catalog">
             View Product <span>↗</span>
           </a>
 
@@ -629,9 +631,10 @@ function App() {
       <article className="product-card">
 
         <div className="product-image">
-          <div className="image-placeholder">
-            <span>PRODUCT IMAGE</span>
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1000&q=85"
+            alt="Self-service payment kiosk"
+          />
         </div>
 
         <div className="product-info">
@@ -647,7 +650,7 @@ function App() {
             designed for faster customer experiences.
           </p>
 
-          <a href="#contact">
+          <a href="/products#product-catalog">
             View Product <span>↗</span>
           </a>
 
@@ -661,9 +664,10 @@ function App() {
       <article className="product-card">
 
         <div className="product-image">
-          <div className="image-placeholder">
-            <span>PRODUCT IMAGE</span>
-          </div>
+          <img
+            src="https://images.unsplash.com/photo-1526738549149-8e07eca6c147?auto=format&fit=crop&w=1000&q=85"
+            alt="POS accessories and business hardware"
+          />
         </div>
 
         <div className="product-info">
@@ -679,8 +683,8 @@ function App() {
             designed to complete your POS setup.
           </p>
 
-          <a href="#contact">
-            View Product <span>↗</span>
+          <a href="/products">
+            View Products <span>↗</span>
           </a>
 
         </div>
@@ -736,7 +740,7 @@ function App() {
             seamless payment experiences for modern retail.
           </p>
 
-          <a href="#contact">
+          <a href="/contact">
             Explore solution <span>↗</span>
           </a>
         </div>
@@ -758,7 +762,7 @@ function App() {
             across every customer touchpoint.
           </p>
 
-          <a href="#contact">
+          <a href="/contact">
             Explore solution <span>↗</span>
           </a>
         </div>
@@ -780,7 +784,7 @@ function App() {
             cafés and hospitality businesses.
           </p>
 
-          <a href="#contact">
+          <a href="/contact">
             Explore solution <span>↗</span>
           </a>
         </div>
@@ -802,7 +806,7 @@ function App() {
             payments and self-service technology.
           </p>
 
-          <a href="#contact">
+          <a href="/contact">
             Explore solution <span>↗</span>
           </a>
         </div>
@@ -824,7 +828,7 @@ function App() {
             high-volume everyday transactions.
           </p>
 
-          <a href="#contact">
+          <a href="/contact">
             Explore solution <span>↗</span>
           </a>
         </div>
@@ -846,7 +850,7 @@ function App() {
             alongside your business.
           </p>
 
-          <a href="#contact">
+          <a href="/contact">
             Explore solution <span>↗</span>
           </a>
         </div>
