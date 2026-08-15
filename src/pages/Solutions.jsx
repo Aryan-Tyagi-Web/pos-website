@@ -20,10 +20,17 @@ function Solutions() {
   }, [])
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+      document.documentElement.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+    }
 
     return () => {
       document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
     }
   }, [menuOpen])
 
@@ -85,7 +92,7 @@ function Solutions() {
 
           <button
             className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`}
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen((open) => !open)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
@@ -115,23 +122,23 @@ function Solutions() {
           </button>
         </div>
 
-       <nav className="main-nav">
-  <a href="/products" className={currentPath === '/products' ? 'active' : ''}>
-    Products
-  </a>
+       <nav className="mobile-drawer-nav">
+          <a href="/products" className={currentPath === '/products' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Products
+          </a>
 
-  <a href="/solutions" className={currentPath === '/solutions' ? 'active' : ''}>
-    Solutions
-  </a>
+          <a href="/solutions" className={currentPath === '/solutions' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Solutions
+          </a>
 
-  <a href="/industries" className={currentPath === '/industries' ? 'active' : ''}>
-    Industries
-  </a>
+          <a href="/industries" className={currentPath === '/industries' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Industries
+          </a>
 
-  <a href="/company" className={currentPath === '/company' ? 'active' : ''}>
-    Company
-  </a>
-</nav>
+          <a href="/company" className={currentPath === '/company' ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+            Company
+          </a>
+        </nav>
 
         <a
           href="#contact"
