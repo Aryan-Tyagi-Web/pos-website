@@ -974,6 +974,10 @@
     display: none;
   }
 
+  .header-cta {
+    display: none;
+  }
+
   .header-container {
     height: 66px;
   }
@@ -2636,7 +2640,7 @@
   right: 28px;
   bottom: 28px;
 
-  z-index: 2000;
+  z-index: 1900;
 
   width: 48px;
   height: 48px;
