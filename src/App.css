@@ -5759,3 +5759,11 @@
     padding-right: 16px;
   }
 }
+
+
+@media (min-width: 761px) {
+  .industry-card-featured {
+    grid-column: auto;
+    min-height: 350px;
+  }
+}
