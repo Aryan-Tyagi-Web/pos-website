@@ -270,6 +270,27 @@ function ProductDetail() {
   const product = productDetails[slug]
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const [showTopButton, setShowTopButton] = useState(false)
+
+useEffect(() => {
+  const handleScroll = () => {
+    setShowTopButton(window.scrollY > 400)
+  }
+
+  window.addEventListener('scroll', handleScroll)
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll)
+  }
+}, [])
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
+
   useEffect(() => {
   if (menuOpen) {
     document.body.style.overflow = 'hidden'
@@ -564,6 +585,16 @@ function ProductDetail() {
 
         </div>
       </footer>
+
+      {showTopButton && (
+  <button
+    className="scroll-top-btn"
+    onClick={scrollToTop}
+    aria-label="Scroll to top"
+  >
+    ↑
+  </button>
+)}
 
     </div>
   )
