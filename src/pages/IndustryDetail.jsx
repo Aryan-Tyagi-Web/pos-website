@@ -88,8 +88,8 @@ function IndustryDetail() {
             <h1>{title}<span>{highlight}</span></h1>
             <p>{description}</p>
             <div className="industry-detail-actions">
-              <a href="#industry-contact" className="industries-primary-btn">Talk to an Expert <span>↗</span></a>
-              <a href="#industry-focus" className="industries-secondary-btn">Explore Industry</a>
+              <Link to="/contact" className="industries-primary-btn">Talk to an Expert <span>↗</span></Link>
+              <Link to="/industries" className="industries-secondary-btn">Explore Industry</Link>
             </div>
           </div>
           <div className="industry-detail-visual">

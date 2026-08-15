@@ -562,7 +562,7 @@ const scrollToTop = () => {
                 <h4>Company</h4>
                 <Link to="/company">About Us</Link>
                 <Link to="/industries">Industries</Link>
-                <a href="#product-contact">Contact</a>
+                <Link to="/contact">Contact</Link>
               </div>
 
             </div>

@@ -167,9 +167,9 @@ function Industries() {
                 <span>↘</span>
               </a>
 
-              <a href="#contact" className="industries-secondary-btn">
+              <Link to="/contact" className="industries-secondary-btn">
                 Talk to an Expert
-              </a>
+              </Link>
             </div>
 
           </div>
@@ -458,7 +458,7 @@ function Industries() {
             </h2>
           </div>
 
-          <a href="#contact">
+          <a href="/contact">
             Talk to an Expert
             <span>↗</span>
           </a>

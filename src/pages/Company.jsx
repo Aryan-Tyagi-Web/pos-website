@@ -106,7 +106,7 @@ function Company() {
 
             <div className="company-hero-actions">
               <a href="#our-story" className="company-primary-btn">Our Story <span>↘</span></a>
-              <a href="#contact" className="company-secondary-btn">Talk to an Expert</a>
+              <a href="/contact" className="company-secondary-btn">Talk to an Expert</a>
             </div>
           </div>
 
@@ -245,7 +245,7 @@ function Company() {
             <span>LET'S WORK TOGETHER</span>
             <h2>Ready to build <span>what's next?</span></h2>
           </div>
-          <a href="#contact">Talk to an Expert <span>↗</span></a>
+          <a href="/contact">Talk to an Expert <span>↗</span></a>
         </section>
 
       </main>
@@ -287,7 +287,7 @@ function Company() {
                 <a href="/company">About Us</a>
                 <a href="/industries">Industries</a>
                 <a href="/contact">Contact</a>
-                <a href="/request-demo">Request a Demo</a>
+                <a href="/contact">Request a Demo</a>
               </div>
             </div>
           </div>

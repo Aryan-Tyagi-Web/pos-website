@@ -1035,7 +1035,7 @@ function App() {
           <a href="/company">About Us</a>
           <a href="/industries">Industries</a>
           <a href="/contact">Contact</a>
-          <a href="/request-demo">Request a Demo</a>
+          <a href="/contact">Request a Demo</a>
         </div>
 
       </div>

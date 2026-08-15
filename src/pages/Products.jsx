@@ -293,7 +293,7 @@ function Products() {
                 <span>↘</span>
               </a>
 
-              <a href="#contact" className="products-secondary-btn">
+              <a href="/contact" className="products-secondary-btn">
                 Talk to an Expert
               </a>
             </div>
@@ -513,7 +513,7 @@ function Products() {
             </h2>
           </div>
 
-          <a href="#contact">
+          <a href="/contact">
             Talk to an Expert
             <span>↗</span>
           </a>
@@ -574,8 +574,8 @@ function Products() {
                 <h4>Company</h4>
                 <a href="/company">About Us</a>
                 <a href="/industries">Industries</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact">Request a Demo</a>
+                <Link to="/contact">Contact</Link>
+                <Link to="/contact">Request a Demo</Link>
               </div>
 
             </div>

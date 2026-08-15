@@ -391,7 +391,7 @@ function Solutions() {
             </h2>
           </div>
 
-          <a href="#contact">
+          <a href="/contact">
             Talk to an Expert
             <span>↗</span>
           </a>
@@ -460,7 +460,7 @@ function Solutions() {
                 <a href="/company">About Us</a>
                 <a href="/industries">Industries</a>
                 <a href="/contact">Contact</a>
-                <a href="/request-demo">Request a Demo</a>
+                <a href="/contact">Request a Demo</a>
               </div>
 
             </div>
