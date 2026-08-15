@@ -252,7 +252,7 @@ function Solutions() {
                 they need every day.
               </p>
 
-              <a href="#contact">
+              <a href="/solutions/point-of-sale">
                 Explore Solution
                 <span>↗</span>
               </a>
@@ -270,7 +270,7 @@ function Solutions() {
                 to completion.
               </p>
 
-              <a href="#contact">
+              <a href="/solutions/order-management">
                 Explore Solution
                 <span>↗</span>
               </a>
@@ -287,7 +287,7 @@ function Solutions() {
                 that reduce friction and keep queues moving.
               </p>
 
-              <a href="#contact">
+              <a href="/solutions/self-service">
                 Explore Solution
                 <span>↗</span>
               </a>
@@ -304,7 +304,7 @@ function Solutions() {
                 displays, interfaces, and in-store experiences.
               </p>
 
-              <a href="#contact">
+              <a href="/solutions/digital-experiences">
                 Explore Solution
                 <span>↗</span>
               </a>
