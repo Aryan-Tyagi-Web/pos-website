@@ -93,7 +93,7 @@ function App() {
           </a>
 
           <nav className="main-nav">
-            <a href="#products">Products</a>
+            <a href="/products">Products</a>
             <a href="#solutions">Solutions</a>
             <a href="#industries">Industries</a>
             <a href="#company">Company</a>
@@ -180,7 +180,7 @@ function App() {
             </p>
 
             <div className="hero-actions">
-              <a href="#products" className="primary-btn">
+              <a href="/products" className="primary-btn">
                 Explore Products
                 <span>↗</span>
               </a>
