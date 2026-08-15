@@ -12,6 +12,7 @@ import SolutionDetail from './pages/SolutionDetail.jsx'
 import Industries from './pages/Industries.jsx'
 import IndustryDetail from './pages/IndustryDetail.jsx'
 import Company from './pages/Company.jsx'
+import Contact from './pages/Contact.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -33,6 +34,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/industries/:slug" element={<IndustryDetail />} />
 
         <Route path="/company" element={<Company />} />
+
+        <Route path="/contact" element={<Contact />} />
 
       </Routes>
     </BrowserRouter>
