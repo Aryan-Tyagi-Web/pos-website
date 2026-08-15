@@ -96,6 +96,7 @@ function SolutionDetail() {
   const { slug } = useParams()
   const solution = solutionDetails[slug]
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showTopButton, setShowTopButton] = useState(false)
 
   useEffect(() => {
     if (menuOpen) {
@@ -111,6 +112,25 @@ function SolutionDetail() {
       document.documentElement.style.overflow = ''
     }
   }, [menuOpen])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopButton(window.scrollY > 500)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
 
   if (!solution) {
     return (
@@ -149,7 +169,7 @@ function SolutionDetail() {
 
           <button
             className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`}
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen((open) => !open)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
@@ -398,6 +418,16 @@ function SolutionDetail() {
 
         </div>
       </footer>
+
+      {showTopButton && (
+        <button
+          className="scroll-top-btn"
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
+      )}
 
     </div>
   )
