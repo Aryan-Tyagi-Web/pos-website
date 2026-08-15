@@ -49,6 +49,7 @@ function Counter({ end, decimals = 0 }) {
 function App() {
   const [showTopButton, setShowTopButton] = useState(false)
   const [productFilter, setProductFilter] = useState('All Products')
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,8 +96,53 @@ function App() {
             <span>↗</span>
           </a>
 
+          <button
+            className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
         </div>
       </header>
+
+      <div
+        className={`mobile-menu-overlay ${menuOpen ? 'open' : ''}`}
+        onClick={() => setMenuOpen(false)}
+      ></div>
+
+      <aside className={`mobile-drawer ${menuOpen ? 'open' : ''}`}>
+        <div className="mobile-drawer-header">
+          <span>MENU</span>
+          <button
+            className="mobile-drawer-close"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+        </div>
+
+        <nav className="mobile-drawer-nav">
+          <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
+          <a href="#solutions" onClick={() => setMenuOpen(false)}>Solutions</a>
+          <a href="#industries" onClick={() => setMenuOpen(false)}>Industries</a>
+          <a href="#company" onClick={() => setMenuOpen(false)}>Company</a>
+        </nav>
+
+        <a
+          href="#contact"
+          className="mobile-drawer-cta"
+          onClick={() => setMenuOpen(false)}
+        >
+          Get a Quote
+          <span>↗</span>
+        </a>
+      </aside>
 
 
       {/* HERO */}
