@@ -6,6 +6,7 @@ import './index.css'
 import App from './App.jsx'
 
 import Products from './pages/Products.jsx'
+import ProductDetail from './pages/ProductDetail.jsx'
 import Solutions from './pages/Solutions.jsx'
 import Industries from './pages/Industries.jsx'
 import Company from './pages/Company.jsx'
@@ -18,6 +19,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
 
         <Route path="/products" element={<Products />} />
+
+        <Route path="/products/:slug" element={<ProductDetail />} />
 
         <Route path="/solutions" element={<Solutions />} />
 

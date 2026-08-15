@@ -38,78 +38,91 @@ const products = [
   {
     number: '01',
     name: 'SN11',
+    slug: 'sn11',
     category: 'MOBILE POS',
     description: 'Compact mobile POS hardware for flexible point-of-sale operations.',
   },
   {
     number: '02',
     name: 'SN57',
+    slug: 'sn57',
     category: 'MOBILE POS',
     description: 'Portable POS hardware designed for fast customer transactions.',
   },
   {
     number: '03',
     name: 'SN60',
+    slug: 'sn60',
     category: 'MOBILE POS',
     description: 'Modern mobile commerce hardware for efficient checkout experiences.',
   },
   {
     number: '04',
     name: 'SN65',
+    slug: 'sn65',
     category: 'MOBILE POS',
     description: 'Flexible mobile POS hardware for retail and hospitality environments.',
   },
   {
     number: '05',
     name: 'SN80',
+    slug: 'sn80',
     category: 'MOBILE POS',
     description: 'A larger mobile POS format designed for connected commerce workflows.',
   },
   {
     number: '06',
     name: 'SN200',
+    slug: 'sn200',
     category: 'STATIONARY POS',
     description: 'Countertop POS hardware built for dependable everyday operations.',
   },
   {
     number: '07',
     name: 'X6',
+    slug: 'x6',
     category: 'STATIONARY POS',
     description: 'Modular POS hardware designed for flexible Android and Windows setups.',
   },
   {
     number: '08',
     name: 'Z3',
+    slug: 'z3',
     category: 'STATIONARY POS',
     description: 'Professional countertop POS hardware for modern business environments.',
   },
   {
     number: '09',
     name: 'Order Taking Tablet',
+    slug: 'order-taking-tablet',
     category: 'ORDER TAKING',
     description: 'Tablet-based ordering designed to help teams capture orders efficiently.',
   },
   {
     number: '10',
     name: 'Digital Menu Display',
+    slug: 'digital-menu-display',
     category: 'DIGITAL MENU',
     description: 'Digital display hardware for clear, flexible menu presentation.',
   },
   {
     number: '11',
     name: 'C2100',
+    slug: 'c2100',
     category: 'KIOSK',
     description: 'Self-service kiosk hardware designed for interactive customer experiences.',
   },
   {
     number: '12',
     name: 'Self-Service Kiosk',
+    slug: 'self-service-kiosk',
     category: 'KIOSK',
     description: 'Standalone self-service hardware for ordering and customer workflows.',
   },
   {
     number: '13',
     name: 'Enterprise Kiosk',
+    slug: 'enterprise-kiosk',
     category: 'KIOSK',
     description: 'Scalable kiosk hardware for high-traffic commercial environments.',
   },
@@ -413,10 +426,16 @@ function Products() {
 
                   <p>{product.description}</p>
 
-                  <a href="#contact">
-                    Request Information
-                    <span>↗</span>
-                  </a>
+                  <div className="catalog-product-actions">
+                    <a href={`/products/${product.slug}`}>
+                      View Product
+                      <span>↗</span>
+                    </a>
+
+                    <a href="#contact" className="catalog-enquire-link">
+                      Enquire
+                    </a>
+                  </div>
 
                 </div>
 
