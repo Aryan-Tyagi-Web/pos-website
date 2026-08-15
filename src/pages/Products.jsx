@@ -154,7 +154,7 @@ function Products() {
 
                 <div className="screen-total">
                   <small>Today's Sales</small>
-                  <strong>$24,680</strong>
+                  <strong>₹24,680</strong>
                 </div>
 
                 <div className="screen-bars">

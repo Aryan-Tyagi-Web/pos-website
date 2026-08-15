@@ -160,7 +160,7 @@ function Solutions() {
 
               <div className="dashboard-sales">
                 <small>Today's Revenue</small>
-                <strong>$48,620</strong>
+                <strong>₹48,620</strong>
                 <span>+18.4%</span>
               </div>
 

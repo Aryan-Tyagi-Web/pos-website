@@ -4963,3 +4963,34 @@
     padding-right: 16px;
   }
 }
+
+
+/* =========================================================
+   SOLUTIONS DESKTOP ADJUSTMENTS
+   ========================================================= */
+
+@media (min-width: 761px) {
+
+  /* Header ke neeche thoda extra gap */
+  .solutions-hero {
+    padding-top: 160px;
+  }
+
+  /* Point of Sale ko baaki cards ke barabar size */
+  .solution-card-large {
+    grid-row: auto;
+    min-height: 320px;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+  .solutions-hero {
+    padding-top: 110px;
+  }
+
+  .solutions-grid-section {
+    padding-top: 110px;
+  }
+}
