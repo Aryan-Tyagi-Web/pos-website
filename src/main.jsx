@@ -13,6 +13,8 @@ import Industries from './pages/Industries.jsx'
 import IndustryDetail from './pages/IndustryDetail.jsx'
 import Company from './pages/Company.jsx'
 import Contact from './pages/Contact.jsx'
+import Privacy from './pages/Privacy.jsx'
+import Terms from './pages/Terms.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -36,6 +38,10 @@ createRoot(document.getElementById('root')).render(
         <Route path="/company" element={<Company />} />
 
         <Route path="/contact" element={<Contact />} />
+
+        <Route path="/privacy" element={<Privacy />} />
+        
+        <Route path="/terms" element={<Terms />} />
 
       </Routes>
     </BrowserRouter>
