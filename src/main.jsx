@@ -10,6 +10,7 @@ import ProductDetail from './pages/ProductDetail.jsx'
 import Solutions from './pages/Solutions.jsx'
 import SolutionDetail from './pages/SolutionDetail.jsx'
 import Industries from './pages/Industries.jsx'
+import IndustryDetail from './pages/IndustryDetail.jsx'
 import Company from './pages/Company.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -28,6 +29,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/solutions/:slug" element={<SolutionDetail />} />
 
         <Route path="/industries" element={<Industries />} />
+
+        <Route path="/industries/:slug" element={<IndustryDetail />} />
 
         <Route path="/company" element={<Company />} />
 
