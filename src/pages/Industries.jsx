@@ -263,7 +263,7 @@ function Industries() {
                 <span>Inventory</span>
               </div>
 
-              <a href="#contact">
+              <a href="/industries/retail">
                 Explore Retail
                 <span>↗</span>
               </a>
@@ -286,7 +286,7 @@ function Industries() {
                 <span>Tableside</span>
               </div>
 
-              <a href="#contact">
+              <a href="/industries/restaurants">
                 Explore Restaurants
                 <span>↗</span>
               </a>
@@ -309,7 +309,7 @@ function Industries() {
                 <span>Payments</span>
               </div>
 
-              <a href="#contact">
+              <a href="/industries/hospitality">
                 Explore Hospitality
                 <span>↗</span>
               </a>
@@ -332,7 +332,7 @@ function Industries() {
                 <span>Payments</span>
               </div>
 
-              <a href="#contact">
+              <a href="/industries/small-business">
                 Explore Small Business
                 <span>↗</span>
               </a>
@@ -355,7 +355,7 @@ function Industries() {
                 <span>Self-Service</span>
               </div>
 
-              <a href="#contact">
+              <a href="/industries/quick-service">
                 Explore Quick Service
                 <span>↗</span>
               </a>
@@ -378,7 +378,7 @@ function Industries() {
                 <span>Scale</span>
               </div>
 
-              <a href="#contact">
+              <a href="/industries/growing-businesses">
                 Explore More
                 <span>↗</span>
               </a>
