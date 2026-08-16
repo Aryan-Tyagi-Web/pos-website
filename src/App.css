@@ -8861,3 +8861,500 @@
     font-size: 13px;
   }
 }
+
+
+/* =========================================================
+   RMA / SUPPORT PAGE
+   ========================================================= */
+
+.rma-hero {
+  min-height: 560px;
+  padding: 145px 7% 80px;
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  gap: 70px;
+  align-items: end;
+  background:
+    radial-gradient(circle at 82% 25%, rgba(11, 92, 255, .14), transparent 32%),
+    linear-gradient(135deg, #f7faff, #eaf2ff);
+}
+
+.rma-hero-content {
+  max-width: 800px;
+}
+
+.rma-eyebrow,
+.rma-section-label {
+  color: #0b5cff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.rma-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rma-eyebrow span {
+  width: 28px;
+  height: 2px;
+  background: #0b5cff;
+}
+
+.rma-hero h1 {
+  margin: 20px 0 0;
+  color: #071a33;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(55px, 7vw, 96px);
+  line-height: .92;
+  letter-spacing: -.07em;
+}
+
+.rma-hero h1 span {
+  display: block;
+  color: #0b5cff;
+}
+
+.rma-hero-content > p {
+  max-width: 630px;
+  margin: 28px 0 0;
+  color: #687991;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.rma-hero-card {
+  padding: 30px;
+  border-left: 1px solid #cbd9e8;
+}
+
+.rma-hero-card > span {
+  color: #0b5cff;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.rma-hero-card strong {
+  display: block;
+  margin-top: 13px;
+  color: #071a33;
+  font-size: 22px;
+}
+
+.rma-hero-card p {
+  margin: 12px 0 0;
+  color: #718197;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.rma-section {
+  padding: 105px 7% 120px;
+  display: grid;
+  grid-template-columns: .75fr 1.25fr;
+  gap: 85px;
+  background: #fff;
+}
+
+.rma-info h2 {
+  margin: 14px 0 0;
+  color: #071a33;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.rma-info > p {
+  max-width: 450px;
+  margin: 25px 0 0;
+  color: #74849a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.rma-info-list {
+  margin-top: 40px;
+  border-top: 1px solid #dce5ef;
+}
+
+.rma-info-list > div {
+  padding: 20px 0;
+  border-bottom: 1px solid #dce5ef;
+}
+
+.rma-info-list span {
+  color: #0b5cff;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.rma-info-list strong {
+  display: block;
+  margin-top: 6px;
+  color: #071a33;
+  font-size: 14px;
+}
+
+.rma-info-list p {
+  margin: 5px 0 0;
+  color: #7b899c;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.rma-support-note {
+  margin-top: 28px;
+}
+
+.rma-support-note > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #8a98aa;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.rma-support-note a {
+  color: #0b5cff;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.rma-form-card {
+  padding: 38px;
+  border: 1px solid #dce5ef;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.rma-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+.rma-form-heading {
+  padding-bottom: 5px;
+}
+
+.rma-form-heading > span {
+  color: #0b5cff;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.rma-form-heading h3 {
+  margin: 8px 0 0;
+  color: #071a33;
+  font-family: 'Manrope', sans-serif;
+  font-size: 30px;
+  letter-spacing: -.04em;
+}
+
+.rma-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.rma-form-card label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rma-form-card label > span {
+  color: #687991;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.rma-form-card input,
+.rma-form-card select,
+.rma-form-card textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d6e0eb;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #071a33;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.rma-form-card input,
+.rma-form-card select {
+  height: 49px;
+  padding: 0 13px;
+}
+
+.rma-form-card textarea {
+  padding: 13px;
+  resize: vertical;
+}
+
+.rma-form-card input:focus,
+.rma-form-card select:focus,
+.rma-form-card textarea:focus {
+  border-color: #0b5cff;
+  box-shadow: 0 0 0 3px rgba(11, 92, 255, .08);
+}
+
+.rma-upload-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.rma-upload {
+  position: relative;
+  min-height: 105px;
+  padding: 18px;
+  box-sizing: border-box;
+  border: 1px dashed #b9c8d9;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.rma-upload input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.rma-upload > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #0b5cff;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+
+.rma-upload strong {
+  display: block;
+  color: #071a33;
+  font-size: 12px;
+}
+
+.rma-upload small {
+  display: block;
+  margin-top: 5px;
+  color: #8a98aa;
+  font-size: 9px;
+}
+
+.rma-submit {
+  min-height: 54px;
+  border: 0;
+  border-radius: 8px;
+  background: #0b5cff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.rma-form-note {
+  color: #8a98aa;
+  font-size: 9px;
+  text-align: center;
+}
+
+.rma-success {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.rma-success-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: #e7f7ef;
+  color: #1e9c68;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.rma-success > span {
+  color: #0b5cff;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .15em;
+}
+
+.rma-success h3 {
+  max-width: 500px;
+  margin: 12px 0 0;
+  color: #071a33;
+  font-family: 'Manrope', sans-serif;
+  font-size: 32px;
+  line-height: 1.05;
+}
+
+.rma-success p {
+  max-width: 460px;
+  margin: 15px 0 25px;
+  color: #74849a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.rma-success button {
+  border: 0;
+  background: transparent;
+  color: #0b5cff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.rma-bottom-cta {
+  padding: 85px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  background: #071a33;
+}
+
+.rma-bottom-cta > div > span {
+  color: #6da0ff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.rma-bottom-cta h2 {
+  margin: 13px 0 0;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(40px, 5vw, 62px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.rma-bottom-cta h2 span {
+  display: block;
+  color: #4f88ff;
+}
+
+.rma-bottom-cta > a {
+  min-width: 150px;
+  min-height: 50px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: #fff;
+  color: #071a33;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.rma-bottom-cta > a span {
+  color: #0b5cff;
+}
+
+@media (max-width: 900px) {
+  .rma-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-top: 125px;
+  }
+
+  .rma-hero-card {
+    padding-left: 0;
+    border-left: 0;
+    border-top: 1px solid #cbd9e8;
+    padding-top: 25px;
+  }
+
+  .rma-section {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .rma-info > p {
+    max-width: none;
+  }
+
+  .rma-bottom-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .rma-hero {
+    min-height: auto;
+    padding: 115px 18px 60px;
+  }
+
+  .rma-hero h1 {
+    font-size: 50px;
+  }
+
+  .rma-section {
+    padding: 70px 18px 80px;
+  }
+
+  .rma-info h2 {
+    font-size: 42px;
+  }
+
+  .rma-form-card {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .rma-form-row,
+  .rma-upload-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rma-form-heading h3 {
+    font-size: 27px;
+  }
+
+  .rma-bottom-cta {
+    padding: 70px 18px;
+  }
+
+  .rma-bottom-cta h2 {
+    font-size: 42px;
+  }
+
+  .rma-bottom-cta > a {
+    width: 100%;
+  }
+}

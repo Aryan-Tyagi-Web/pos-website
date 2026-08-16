@@ -15,6 +15,7 @@ import Company from './pages/Company.jsx'
 import Contact from './pages/Contact.jsx'
 import Privacy from './pages/Privacy.jsx'
 import Terms from './pages/Terms.jsx'
+import RMA from './pages/RMA.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -42,6 +43,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/privacy" element={<Privacy />} />
         
         <Route path="/terms" element={<Terms />} />
+
+        <Route path="/rma" element={<RMA />} />
 
       </Routes>
     </BrowserRouter>
