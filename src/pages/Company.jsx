@@ -45,7 +45,7 @@ function Company() {
             ))}
           </nav>
 
-          <a href="#contact" className="header-cta">Get a Quote <span>↗</span></a>
+          <a href="/contact" className="header-cta">Get a Quote <span>↗</span></a>
 
           <button
             className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`}
