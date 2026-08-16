@@ -132,6 +132,24 @@ const products = [
 
 function ProductImage({ product }) {
   const [imageUrl, setImageUrl] = useState('')
+  const [imageFailed, setImageFailed] = useState(false)
+
+  const fallbackImages = {
+    'SN11': 'https://loremflickr.com/900/700/pos,terminal?lock=111',
+    'SN57': 'https://loremflickr.com/900/700/pos,terminal?lock=157',
+    'SN60': 'https://loremflickr.com/900/700/pos,terminal?lock=160',
+    'SN65': 'https://loremflickr.com/900/700/pos,terminal?lock=165',
+    'SN80': 'https://loremflickr.com/900/700/pos,terminal?lock=180',
+    'Digital Menu Display': 'https://loremflickr.com/900/700/digital,menu,board?lock=401',
+  }
+
+  const fallbackImage =
+    fallbackImages[product.name] ||
+    (product.category === 'MOBILE POS'
+      ? 'https://loremflickr.com/900/700/pos,terminal?lock=999'
+      : product.category === 'DIGITAL MENU'
+        ? 'https://loremflickr.com/900/700/digital,menu,board?lock=998'
+        : '')
 
   useEffect(() => {
     const mediaSearchMap = {
@@ -153,6 +171,9 @@ function ProductImage({ product }) {
     const searchTerm = mediaSearchMap[product.name] || product.name
     const controller = new AbortController()
 
+    setImageUrl('')
+    setImageFailed(false)
+
     fetch(
       `https://posio.in/wp-json/wp/v2/media?search=${encodeURIComponent(searchTerm)}&media_type=image&per_page=20`,
       { signal: controller.signal }
@@ -162,23 +183,36 @@ function ProductImage({ product }) {
         return response.json()
       })
       .then((media) => {
+        const needle = searchTerm.toLowerCase()
+
         const match = media.find((item) => {
           const title = item?.title?.rendered?.toLowerCase() || ''
           const alt = item?.alt_text?.toLowerCase() || ''
           const file = item?.source_url?.toLowerCase() || ''
-          const needle = searchTerm.toLowerCase()
-          return title.includes(needle) || alt.includes(needle) || file.includes(needle)
+
+          return (
+            title.includes(needle) ||
+            alt.includes(needle) ||
+            file.includes(needle)
+          )
         })
 
         const firstImage = match?.source_url || media?.[0]?.source_url
-        if (firstImage) setImageUrl(firstImage)
+
+        if (firstImage) {
+          setImageUrl(firstImage)
+        }
       })
-      .catch(() => {})
+      .catch(() => {
+        // Use the product/category-specific temporary image below.
+      })
 
     return () => controller.abort()
   }, [product.name])
 
-  if (!imageUrl) {
+  const finalImage = imageFailed || !imageUrl ? fallbackImage : imageUrl
+
+  if (!finalImage) {
     return (
       <div className="catalog-product-image-loading" aria-label={`${product.name} product image`}>
         <span>{product.name}</span>
@@ -188,9 +222,10 @@ function ProductImage({ product }) {
 
   return (
     <img
-      src={imageUrl}
+      src={finalImage}
       alt={`${product.name} product`}
       loading="lazy"
+      onError={() => setImageFailed(true)}
       style={{
         width: '100%',
         height: '100%',
