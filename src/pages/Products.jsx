@@ -129,6 +129,80 @@ const products = [
   },
 ]
 
+
+function ProductImage({ product }) {
+  const [imageUrl, setImageUrl] = useState('')
+
+  useEffect(() => {
+    const mediaSearchMap = {
+      'SN11': 'SN11',
+      'SN57': 'SN57',
+      'SN60': 'SN60',
+      'SN65': 'SN65',
+      'SN80': 'SN80',
+      'SN200': 'SN200',
+      'X6': 'X6',
+      'Z3': 'Z3',
+      'Order Taking Tablet': 'Armor Pad',
+      'Digital Menu Display': 'Digital Menu Board',
+      'C2100': 'C2100',
+      'Self-Service Kiosk': 'C2100',
+      'Enterprise Kiosk': 'C2100',
+    }
+
+    const searchTerm = mediaSearchMap[product.name] || product.name
+    const controller = new AbortController()
+
+    fetch(
+      `https://posio.in/wp-json/wp/v2/media?search=${encodeURIComponent(searchTerm)}&media_type=image&per_page=20`,
+      { signal: controller.signal }
+    )
+      .then((response) => {
+        if (!response.ok) throw new Error('Unable to load product image')
+        return response.json()
+      })
+      .then((media) => {
+        const match = media.find((item) => {
+          const title = item?.title?.rendered?.toLowerCase() || ''
+          const alt = item?.alt_text?.toLowerCase() || ''
+          const file = item?.source_url?.toLowerCase() || ''
+          const needle = searchTerm.toLowerCase()
+          return title.includes(needle) || alt.includes(needle) || file.includes(needle)
+        })
+
+        const firstImage = match?.source_url || media?.[0]?.source_url
+        if (firstImage) setImageUrl(firstImage)
+      })
+      .catch(() => {})
+
+    return () => controller.abort()
+  }, [product.name])
+
+  if (!imageUrl) {
+    return (
+      <div className="catalog-product-image-loading" aria-label={`${product.name} product image`}>
+        <span>{product.name}</span>
+      </div>
+    )
+  }
+
+  return (
+    <img
+      src={imageUrl}
+      alt={`${product.name} product`}
+      loading="lazy"
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'block',
+        objectFit: 'contain',
+        objectPosition: 'center',
+        mixBlendMode: 'multiply',
+      }}
+    />
+  )
+}
+
 function Products() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [showTopButton, setShowTopButton] = useState(false)
@@ -410,8 +484,7 @@ function Products() {
 
                 <div className="catalog-product-visual">
                   <div className="catalog-product-placeholder">
-                    <span>{product.name}</span>
-                    <small>PRODUCT IMAGE</small>
+                    <ProductImage product={product} />
                   </div>
 
                   <div className="catalog-product-index">
