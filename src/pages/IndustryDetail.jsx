@@ -61,7 +61,7 @@ function IndustryDetail() {
             <Link to="/industries" className="active">Industries</Link>
             <Link to="/company">Company</Link>
           </nav>
-          <a href="#industry-contact" className="header-cta">Get a Quote <span>↗</span></a>
+          <a href="/contact" className="header-cta">Get a Quote <span>↗</span></a>
           <button className={`mobile-menu-toggle ${menuOpen ? 'active' : ''}`} onClick={() => setMenuOpen(o => !o)} aria-label="Toggle menu" aria-expanded={menuOpen}>
             <span></span><span></span><span></span>
           </button>
@@ -77,7 +77,7 @@ function IndustryDetail() {
           <Link to="/industries" className="active" onClick={() => setMenuOpen(false)}>Industries</Link>
           <Link to="/company" onClick={() => setMenuOpen(false)}>Company</Link>
         </nav>
-        <a href="#industry-contact" className="mobile-drawer-cta" onClick={() => setMenuOpen(false)}>Get a Quote <span>↗</span></a>
+        <a href="/contact" className="mobile-drawer-cta" onClick={() => setMenuOpen(false)}>Get a Quote <span>↗</span></a>
       </aside>
 
       <main>
@@ -139,7 +139,7 @@ function IndustryDetail() {
               <div className="footer-column"><h4>Company</h4><Link to="/company">About Us</Link><Link to="/industries">Industries</Link><a href="#industry-contact">Contact</a></div>
             </div>
           </div>
-          <div className="footer-bottom"><span>© 2026 POS TECH. All rights reserved.</span><div className="footer-bottom-links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><span className="footer-status"><i></i>SYSTEMS ONLINE</span></div>
+          <div className="footer-bottom"><span>© 2026 POS TECH. All rights reserved.</span><div className="footer-bottom-links"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/rma">Support / RMA</a></div><span className="footer-status"><i></i>SYSTEMS ONLINE</span></div>
         </div>
       </footer>
 

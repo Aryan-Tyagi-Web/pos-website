@@ -336,7 +336,7 @@ const scrollToTop = () => {
             <Link to="/company">Company</Link>
           </nav>
 
-          <a href="#product-contact" className="header-cta">
+          <a href="/contact" className="header-cta">
             Get a Quote
             <span>↗</span>
           </a>
@@ -380,7 +380,7 @@ const scrollToTop = () => {
         </nav>
 
         <a
-          href="#product-contact"
+          href="/contact"
           className="mobile-drawer-cta"
           onClick={() => setMenuOpen(false)}
         >
@@ -575,6 +575,7 @@ const scrollToTop = () => {
             <div className="footer-bottom-links">
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
+              <a href="/rma">Support / RMA</a>
             </div>
 
             <span className="footer-status">

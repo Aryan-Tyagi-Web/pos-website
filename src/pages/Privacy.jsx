@@ -245,6 +245,7 @@ function Privacy() {
             <div className="footer-bottom-links">
               <Link to="/privacy">Privacy</Link>
               <Link to="/terms">Terms</Link>
+              <Link to="/rma">Support / RMA</Link>
             </div>
             <span className="footer-status"><i></i>SYSTEMS ONLINE</span>
           </div>

@@ -207,7 +207,7 @@ function SolutionDetail() {
         </nav>
 
         <a
-          href="#solution-contact"
+          href="/contact"
           className="mobile-drawer-cta"
           onClick={() => setMenuOpen(false)}
         >
@@ -240,7 +240,7 @@ function SolutionDetail() {
             <p>{solution.description}</p>
 
             <div className="solution-detail-actions">
-              <a href="#solution-contact" className="solutions-primary-btn">
+              <a href="/contact" className="solutions-primary-btn">
                 Talk to an Expert
                 <span>↗</span>
               </a>
@@ -337,7 +337,7 @@ function SolutionDetail() {
             </h2>
           </div>
 
-          <a href="mailto:hello@postech.com">
+          <a href="/contact">
             Talk to an Expert
             <span>↗</span>
           </a>
@@ -394,6 +394,7 @@ function SolutionDetail() {
                 <Link to="/company">About Us</Link>
                 <Link to="/industries">Industries</Link>
                 <Link to="/contact">Contact</Link>
+                <Link to="/rma">Support / RMA</Link>
               </div>
 
             </div>

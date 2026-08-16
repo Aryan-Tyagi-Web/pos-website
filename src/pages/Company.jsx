@@ -82,7 +82,7 @@ function Company() {
           ))}
         </nav>
 
-        <a href="#contact" className="mobile-drawer-cta" onClick={() => setMenuOpen(false)}>
+        <a href="/contact" className="mobile-drawer-cta" onClick={() => setMenuOpen(false)}>
           Get a Quote <span>↗</span>
         </a>
       </aside>
@@ -297,6 +297,7 @@ function Company() {
             <div className="footer-bottom-links">
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
+              <a href="/rma">Support / RMA</a>
             </div>
             <span className="footer-status"><i></i>SYSTEMS ONLINE</span>
           </div>

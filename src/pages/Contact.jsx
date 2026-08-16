@@ -66,7 +66,7 @@ function Contact() {
             <Link to="/company">Company</Link>
           </nav>
 
-          <a href="#contact-form" className="header-cta active">
+          <a href="/contact" className="header-cta">
             Get a Quote
             <span>↗</span>
           </a>
@@ -111,7 +111,7 @@ function Contact() {
         </nav>
 
         <a
-          href="#contact-form"
+          href="/contact"
           className="mobile-drawer-cta"
           onClick={() => setMenuOpen(false)}
         >
@@ -399,6 +399,7 @@ function Contact() {
             <div className="footer-bottom-links">
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
+              <a href="/rma">Support / RMA</a>
             </div>
 
             <span className="footer-status">

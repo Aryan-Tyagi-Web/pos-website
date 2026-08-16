@@ -365,10 +365,10 @@ function RMA() {
             </h2>
           </div>
 
-          <Link to="/contact">
+          <a href="/contact">
             Contact Us
             <span>↗</span>
-          </Link>
+          </a>
 
         </section>
 

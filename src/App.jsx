@@ -1056,6 +1056,7 @@ function App() {
       <div className="footer-bottom-links">
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
+        <a href="/rma">Support / RMA</a>
       </div>
 
       <span className="footer-status">

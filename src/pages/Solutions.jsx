@@ -85,7 +85,7 @@ function Solutions() {
   </a>
 </nav>
 
-          <a href="#contact" className="header-cta">
+          <a href="/contact" className="header-cta">
             Get a Quote
             <span>↗</span>
           </a>
@@ -141,7 +141,7 @@ function Solutions() {
         </nav>
 
         <a
-          href="#contact"
+          href="/contact"
           className="mobile-drawer-cta"
           onClick={() => setMenuOpen(false)}
         >
@@ -476,6 +476,7 @@ function Solutions() {
             <div className="footer-bottom-links">
               <a href="/privacy">Privacy</a>
               <a href="/terms">Terms</a>
+              <a href="/rma">Support / RMA</a>
             </div>
 
             <span className="footer-status">
