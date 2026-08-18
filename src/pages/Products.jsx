@@ -134,22 +134,22 @@ function ProductImage({ product }) {
   const [imageUrl, setImageUrl] = useState('')
   const [imageFailed, setImageFailed] = useState(false)
 
+  // Stable temporary product photography.
+  // These replace the unreliable loremflickr fallbacks.
   const fallbackImages = {
-    'SN11': 'https://loremflickr.com/900/700/pos,terminal?lock=111',
-    'SN57': 'https://loremflickr.com/900/700/pos,terminal?lock=157',
-    'SN60': 'https://loremflickr.com/900/700/pos,terminal?lock=160',
-    'SN65': 'https://loremflickr.com/900/700/pos,terminal?lock=165',
-    'SN80': 'https://loremflickr.com/900/700/pos,terminal?lock=180',
-    'Digital Menu Display': 'https://loremflickr.com/900/700/digital,menu,board?lock=401',
+    // Mobile POS
+    'SN11': 'https://posio.in/wp-content/uploads/2024/10/Posio-SN-60.png',
+    'SN57': 'https://www.poszeo.com/wp-content/uploads/2025/09/Hd11f4303889c4f3f86922faecddc3174b.jpg',
+    'SN60': 'https://posio.in/wp-content/uploads/2024/10/Posio-SN-60.png',
+    'SN65': 'https://content1.rozetka.com.ua/goods/images/big/384709145.jpg',
+    'SN80': 'https://www.hosoton.com/uploads/120.jpg',
+
+    // Digital Menu
+    'Digital Menu Display':
+      'https://www.lumsadvertising.ae/cdn/shop/files/digital-menu-board.jpg?v=1757523168',
   }
 
-  const fallbackImage =
-    fallbackImages[product.name] ||
-    (product.category === 'MOBILE POS'
-      ? 'https://loremflickr.com/900/700/pos,terminal?lock=999'
-      : product.category === 'DIGITAL MENU'
-        ? 'https://loremflickr.com/900/700/digital,menu,board?lock=998'
-        : '')
+  const fallbackImage = fallbackImages[product.name] || ''
 
   useEffect(() => {
     const mediaSearchMap = {
@@ -204,7 +204,7 @@ function ProductImage({ product }) {
         }
       })
       .catch(() => {
-        // Use the product/category-specific temporary image below.
+        // Stable fallback below is used when the POSIO media request is unavailable.
       })
 
     return () => controller.abort()
@@ -214,7 +214,10 @@ function ProductImage({ product }) {
 
   if (!finalImage) {
     return (
-      <div className="catalog-product-image-loading" aria-label={`${product.name} product image`}>
+      <div
+        className="catalog-product-image-loading"
+        aria-label={`${product.name} product image`}
+      >
         <span>{product.name}</span>
       </div>
     )
