@@ -51,6 +51,8 @@ function App() {
   const [productFilter, setProductFilter] = useState('All Products')
   const [menuOpen, setMenuOpen] = useState(false)
 
+  const [openFaq, setOpenFaq] = useState(null)
+
   const currentPath = window.location.pathname
 
   useEffect(() => {
@@ -926,6 +928,229 @@ function App() {
   </div>
 
 </section>
+
+      {/* FAQ */}
+      <section
+        id="faq"
+        style={{
+          padding: '110px 7%',
+          background: '#f7f9fc',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1180px',
+            margin: '0 auto',
+          }}
+        >
+
+          {/* FAQ HEADING */}
+          <div style={{ maxWidth: '700px' }}>
+
+            <div className="section-label">
+              <span></span>
+              FREQUENTLY ASKED QUESTIONS
+            </div>
+
+            <h2
+              style={{
+                margin: '18px 0 0',
+                color: '#071a33',
+                fontSize: 'clamp(42px, 5vw, 68px)',
+                lineHeight: '.98',
+                letterSpacing: '-.055em',
+              }}
+            >
+              Questions?
+              <span
+                style={{
+                  display: 'block',
+                  color: '#0b5cff',
+                }}
+              >
+                We've got answers.
+              </span>
+            </h2>
+
+            <p
+              style={{
+                maxWidth: '620px',
+                margin: '24px 0 0',
+                color: '#66758a',
+                fontSize: '14px',
+                lineHeight: '1.8',
+              }}
+            >
+              Find quick answers to common questions about our POS
+              technology, products, support and business solutions.
+            </p>
+
+          </div>
+
+
+          {/* FAQ LIST */}
+          <div
+            style={{
+              maxWidth: '940px',
+              marginTop: '55px',
+              borderTop: '1px solid #dbe4ef',
+            }}
+          >
+
+            {[
+              {
+                question: 'What types of POS solutions do you offer?',
+                answer:
+                  'We offer POS hardware and technology solutions designed for different business environments, including POS terminals, self-service kiosks, order-taking devices and digital customer-facing displays.',
+              },
+              {
+                question: 'Which businesses can use your POS solutions?',
+                answer:
+                  'Our solutions are designed for a range of businesses including retail, restaurants, hospitality, QSR and food service, supermarkets and growing businesses.',
+              },
+              {
+                question: 'Can I request a product or business quotation?',
+                answer:
+                  'Yes. You can use the Get a Quote or Talk to Our Team options on the website to share your requirements with our team.',
+              },
+              {
+                question: 'Do you provide support after purchase?',
+                answer:
+                  'Yes. Customers can contact the support team for product-related assistance. Hardware issues can also be registered through the Support / RMA section.',
+              },
+              {
+                question: 'How can I raise a support or RMA request?',
+                answer:
+                  'Open the Support / RMA page from the website footer and submit your product, serial number, contact details and issue information through the support form.',
+              },
+              {
+                question: 'Can your POS solutions be used with existing business software?',
+                answer:
+                  'Compatibility depends on the specific product, software and business setup. Contact our team with your current requirements so the appropriate solution can be evaluated.',
+              },
+              {
+                question: 'Can I request a demo before making a decision?',
+                answer:
+                  'Yes. Use the Request a Demo or Contact Us options to share your requirements and discuss the most suitable POS setup for your business.',
+              },
+              {
+                question: 'How can I contact your team?',
+                answer:
+                  'You can reach the team through the Contact page or use the Get a Quote and Talk to Our Team buttons available throughout the website.',
+              },
+            ].map((faq, index) => (
+
+              <div
+                key={faq.question}
+                style={{
+                  borderBottom: '1px solid #dbe4ef',
+                }}
+              >
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    setOpenFaq(
+                      openFaq === index ? null : index
+                    )
+                  }
+                  aria-expanded={openFaq === index}
+                  style={{
+                    width: '100%',
+                    minHeight: '86px',
+                    padding: '20px 4px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: '30px',
+                    border: '0',
+                    background: 'transparent',
+                    color: '#071a33',
+                    fontFamily: 'inherit',
+                    fontSize: '15px',
+                    fontWeight: '800',
+                    textAlign: 'left',
+                    cursor: 'pointer',
+                  }}
+                >
+
+                  <span
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '20px',
+                    }}
+                  >
+
+                    <small
+                      style={{
+                        flexShrink: 0,
+                        color: '#0b5cff',
+                        fontSize: '9px',
+                        fontWeight: '900',
+                        letterSpacing: '.08em',
+                      }}
+                    >
+                      {String(index + 1).padStart(2, '0')}
+                    </small>
+
+                    {faq.question}
+
+                  </span>
+
+
+                  <i
+                    style={{
+                      flexShrink: 0,
+                      width: '32px',
+                      height: '32px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      border: '1px solid #d4dfeb',
+                      borderRadius: '50%',
+                      background:
+                        openFaq === index
+                          ? '#0b5cff'
+                          : 'transparent',
+                      color:
+                        openFaq === index
+                          ? '#fff'
+                          : '#0b5cff',
+                      fontSize: '18px',
+                      fontStyle: 'normal',
+                      fontWeight: '400',
+                    }}
+                  >
+                    {openFaq === index ? '−' : '+'}
+                  </i>
+
+                </button>
+
+
+                {openFaq === index && (
+                  <div
+                    style={{
+                      padding: '0 65px 25px 54px',
+                      color: '#718197',
+                      fontSize: '13px',
+                      lineHeight: '1.8',
+                    }}
+                  >
+                    <p style={{ margin: 0 }}>
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+      </section>
 
     {/* CTA */}
 <section className="cta-section" id="contact">
